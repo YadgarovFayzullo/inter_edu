@@ -8,7 +8,7 @@ export default function Book() {
           <img
             className='data-aos="fade-up"
             data-aos-duration="3000" '
-            src="/iego_edu.png"
+            src="/mainbook.jpg"
             alt=""
           />
         </div>

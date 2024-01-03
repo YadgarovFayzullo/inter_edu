@@ -67,8 +67,3 @@ body {
   grid-auto-flow: column;
   place-content: center;
 }
-
-
-@media screen and (max-width: 480px) {
-  
-}

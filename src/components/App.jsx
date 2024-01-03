@@ -5,7 +5,6 @@ import Redaction from "../pages/Redaction";
 import PubRules from "../pages/PubRules";
 import AboutUs from "../pages/AboutUs";
 import Archive from "../pages/Archive";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
       <Route path="/PubRules" element={<PubRules />} />
       <Route path="/about" element={<AboutUs/>} />
       <Route path="/archive" element={<Archive/>} />
-      <SpeedInsights/>
     </Routes>
     </BrowserRouter>
     </div>
