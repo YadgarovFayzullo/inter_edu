@@ -11,36 +11,8 @@ export default function Footer() {
     <footer className="text-white p-10 bg-gray-950">
       <div className="flex justify-evenly py-16">
         <div className="w-[20%] leading-10">
-          <ul>
-            <li className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out gap-10 ">
-              About Us
-            </li>
-            <li className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out ">
-              Terms & Conditions{" "}
-            </li>
-            <li className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out ">
-              Privacy Policy
-            </li>
-            <li className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out ">
-              Rooms
-            </li>
-          </ul>
-        </div>
-
-        <div className="w-[20%] leading-10">
-          <ul>
-            <li className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out ">
-              The Rooms & Suites
-            </li>
-            <li className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out ">
-              About Us
-            </li>
-            <li className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out ">
-              Contact Us
-            </li>
-           
+          <ul>   
             <strong>ISSN 2992-9024 </strong>
-           
           </ul>
         </div>
         <div>
