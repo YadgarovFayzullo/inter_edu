@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Colleagues() {
   return (
-    <div className="container flex justify-around">
+    <div className="container flex justify-around sm:ml-4 mr-4 mt-10">
       <h1 className="mt-28">
        <strong className="text-bold"> Главный редактор: </strong> Ядгаров Нодир Джалолович, доктор педагогических наук,
         профессор. <br />

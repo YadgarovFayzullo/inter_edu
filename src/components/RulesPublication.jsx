@@ -2,8 +2,8 @@ import React from "react";
 
 export default function RulesPublication() {
   return (
-    <div className="">
-      <h1 className="mt-28 mb-9 ml-7 mr-4">
+    <div>
+      <h1 className="mt-28 mb-9 ml-7 mr-4 sm:mb-6">
         <strong className="text-strong">
           ILMIY-NAZARIY VA METODIK JURNALI AXBOROT XATI{" "}
         </strong>

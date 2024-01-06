@@ -3,17 +3,15 @@ import React from "react";
 export default function Book() {
   return (
     <div className="container mt-44 mb-16">
-      <div className="flex justify-around w-full">
-        <div className="w-[20%] ml-16 shadow-lg hover:shadow-2xl duration-200">
+      <div className="flex justify-around w-full sm:max-xl:flex-col items-center">
+        <div className="w-1/5 ml-16 shadow-lg hover:shadow-2xl duration-200 sm: w-[80%] ml-3">
           <img
-            className='data-aos="fade-up"
-            data-aos-duration="3000" '
             src="/mainbook.jpg"
             alt=""
           />
         </div>
         <div className="text-xl mt-24 body">
-          <p className="font-BookText italic text-gray-600 flex justify-items-end tipo">
+          <p className="font-BookText italic text-gray-600 flex justify-items-end tipo sm:ml-5 mr-5">
             Журнал адресован преподавателям, магистрантам, исследователям,
             <br />
             студентам вузов, а также всем, кто интересуется проблемами

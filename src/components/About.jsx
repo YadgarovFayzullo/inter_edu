@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <div>
-      <h1 className="mt-24 ml-6 mb-5">
+      <h1 className="mt-24 ml-6 mb-5 sm:pt-10">
         Учредитель: Бухарский государственный педагогический институт <br />
         Журнал зарегистрирован Агентством информации и массовых коммуникаций при
         Администрации Президента Республики Узбекистан свидетельством №111889 от
@@ -17,7 +17,7 @@ export default function About() {
         русский и английских языках.
       </h1>
       <div>
-        <h1 className="ml-[26%] text-xl">Лицензия</h1>
+        <h1 className="ml-[26%] text-xl sm:items-center ml-[45%]">Лицензия</h1>
         <a href="./guvohnoma.pdf" target="_blank">
           <img
             className="w-[20%] ml-72 mb-12 mt-12"
