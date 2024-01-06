@@ -3,7 +3,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="relative sm:text-xs">
+    <div className="relative sm:ml-24">
       <div className="fixed w-full z-50 top-0 left-0 bg-white text-black text-xl py-4 flex items-center justify-center font-NavFont">
         <div className="items-center flex">
           <Link to={"/"} className="link">
