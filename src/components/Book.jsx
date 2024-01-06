@@ -4,7 +4,7 @@ export default function Book() {
   return (
     <div className="container mt-44 mb-16">
       <div className="flex justify-around w-full sm:max-md:flex-col ">
-        <div className="w-[20%] ml-36 shadow-lg hover:shadow-2xl duration-200 sm:max-md:w-[50%]">
+        <div className="w-[20%] ml-36 shadow-lg hover:shadow-2xl duration-200 sm:max-md:w-[50%] md:flex items-center">
           <img
             src="/mainbook.jpg"
             alt=""
