@@ -16,7 +16,7 @@ export default function Archived() {
             <li>
               <a
                 className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
-                href="/IE&GS1.pdf"
+                href="/IE&GO1.pdf"
               >
                 1-son
               </a>
@@ -24,7 +24,7 @@ export default function Archived() {
             <li>
               <a
                 className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
-                href="/IE&GS2.pdf"
+                href="/IE&GO2.pdf"
               >
                 2-son
               </a>
@@ -32,7 +32,7 @@ export default function Archived() {
             <li>
               <a
                 className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
-                href="/IE&GS3.pdf"
+                href="/IE&G03.pdf"
               >
                 3-son
               </a>
@@ -40,7 +40,7 @@ export default function Archived() {
             <li>
               <a
                 className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
-                href="/IE&GS4.pdf"
+                href="/IE&GO4.pdf"
               >
                 4-son
               </a>
