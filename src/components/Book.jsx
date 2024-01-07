@@ -8,7 +8,7 @@ export default function Book() {
           <img className="shadow-lg rounded-lg lg:justify-around lg:shadow-lg hover:shadow-2xl duration-200 lg:ml-40" src="/mainbook.jpg" alt="" />
         </div>
         <div className="">
-          <p className="text-sm mt-5 mr-16 ml-5 mb-4 sm:mr-12 md:justify-items-end md:mt-[10%] md:ml-[30%] md:mr-[25%]">
+          <p className="text-sm mt-5 mr-16 ml-5 mb-4 sm:mr-12 md:justify-items-end md:mt-[10%] md:ml-[30%] md:mr-[25%] lg:text-md lg:text-gray-500">
             Журнал адресован преподавателям, магистрантам, исследователям,
             студентам вузов, а также всем, кто интересуется проблемами
             современной науки. К публикации принимаются статьи, в ко

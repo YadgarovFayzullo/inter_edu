@@ -5,9 +5,9 @@ export default function Archived() {
   return (
     <div>
       <div className="flex justify-center">
-        <h1 className="mt-36 text-sm font-medium">Архив всех номеров</h1>
+        <h1 className="mt-36 text-sm font-medium lg:text-2xl">Архив всех номеров</h1>
       </div>
-      <div className="grid grid-row-col auto-cols-max gap-5 ml-14 mt-10 mb-96">
+      <div className="grid grid-row-col auto-cols-max gap-5 ml-14 mt-10 mb-96 lg:flex ">
         <div>
           <h1 className="bg-[#ffba5a] rounded-md py-1 px-28 text-white ">
             2023
