@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-rou
 import Home from "../pages/Home";
 import Redaction from "../pages/Redaction";
 import PubRules from "../pages/PubRules";
-import AboutUs from "../pages/AboutUs";
 import Archive from "../pages/Archive";
+import AboutUs from "../pages/AboutUs";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Route index element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/redaction" element={<Redaction />} />
-      <Route path="/PubRules" element={<PubRules />} />
+      <Route path="/rules" element={<PubRules />} />
       <Route path="/about" element={<AboutUs/>} />
       <Route path="/archive" element={<Archive/>} />
     </Routes>

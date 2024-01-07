@@ -2,70 +2,74 @@ import React from "react";
 import { BsTelegram } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5";
-import { MdOutlineMail } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="text-white p-10 bg-gray-950">
-      <div className="flex justify-evenly py-16">
-        <div className="w-[20%] leading-10">
-          <ul>   
-            <strong>ISSN 2992-9024 </strong>
-          </ul>
-        </div>
-        <div>
-          <div className="">
-            <div className="flex items-center gap-2">
-              <IoLocationSharp />
-              <span>address:</span>
-            </div>
-            <h1 className="text-gray-400 content-between">
-              Uzbekistan Bukhara. <br />
-              s.Yangiyul,51 200100
-            </h1>
+    <section className="bg-slate-950">
+      <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+        <nav className="flex flex-wrap justify-center -mx-5 -my-2">
+          <div className="px-5 py-2">
+            <a
+              href="https://t.me/IEandGO"
+              className="text-base leading-6 text-gray-500 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
+            >
+              Блог
+            </a>
           </div>
-          <div>
-            <div className="flex items-center gap-2 mt-8">
-              <FaPhone />
-              <span>Phone:</span>
-            </div>
-            <h1 className="text-gray-400">
-              0 (365) 224-69-98 <br />
-               +99897 300-34-00
-            </h1>
+          <div className="px-5 py-2">
+            <a
+              href="#"
+              className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
+            >
+              О нас
+            </a>
           </div>
-          <div>
-            <div className="flex items-center gap-2 mt-6">
-              <MdOutlineMail />
-              <span>Email:</span>
-            </div>
-            <h1 className="text-gray-400">nodirbekyadgarov@gmail.com</h1>
+          <div className="px-5 py-2">
+            <a
+              href="https://t.me/IEandGO"
+              className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
+            >
+              Цены
+            </a>
           </div>
+          <div className="px-5 py-2">
+            <a
+              href="https://t.me/IEandGO"
+              className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
+            >
+              Контакты
+            </a>
+          </div>
+          <div className="px-5 py-2">
+            <a
+              href="https://t.me/IEandGO"
+              className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
+            >
+              Условия
+            </a>
+          </div>
+        </nav>
+        <div className="flex justify-center mt-8 space-x-6">
+          <a
+            className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
+            href="https://t.me/IEandGO"
+          >
+            <BsTelegram size={25} />
+          </a>
+          <a
+            className="text-gray-400 hover:text-white transform hover:scale-80  transition-all duration-150 ease-in-out"
+            href=""
+          >
+            <FaInstagram size={25} />
+          </a>
+          <a
+            className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out"
+            href=""
+          >
+            <FaFacebook size={25} />
+          </a>
         </div>
       </div>
-
-      <div className="flex space-x-4 justify-center gap-5 ">
-        <a
-          className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
-          href="https://t.me/IEandGO"
-        >
-          <BsTelegram size={25} />
-        </a>
-        <a
-          className="text-gray-400 hover:text-white transform hover:scale-80  transition-all duration-150 ease-in-out"
-          href=""
-        >
-          <FaInstagram size={25} />
-        </a>
-        <a
-          className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out"
-          href=""
-        >
-          <FaFacebook size={25} />
-        </a>
-      </div>
-    </footer>
+    </section>
   );
 }
