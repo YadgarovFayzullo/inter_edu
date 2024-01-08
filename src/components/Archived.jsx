@@ -12,13 +12,13 @@ export default function Archived() {
           <h1 className="bg-[#ffba5a] rounded-md py-1 px-28 text-white ">
             2023
           </h1>
-          <ul className="ml-24 mt-4">
+          <ul className="ml-20 mt-4">
             <li>
               <a
                 className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
                 href="/IE&GS1.pdf"
               >
-                1-son
+                1-выпуск
               </a>
             </li>
             <li>
@@ -26,7 +26,7 @@ export default function Archived() {
                 className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
                 href="/IE&GS2.pdf"
               >
-                2-son
+                2-выпуск
               </a>
             </li>
             <li>
@@ -34,7 +34,7 @@ export default function Archived() {
                 className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
                 href="/IE&GS3.pdf"
               >
-                3-son
+                3-выпуск
               </a>
             </li>
             <li>
@@ -42,7 +42,7 @@ export default function Archived() {
                 className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
                 href="/IE&GS4.pdf"
               >
-                4-son
+                4-выпуск
               </a>
             </li>
           </ul>
