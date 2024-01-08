@@ -3,8 +3,8 @@ import React from "react";
 export default function About() {
   return (
     <div>
-      <h1 className="mt-24 ml-6 mb-5 sm:pt-10">
-        Учредитель: Бухарский государственный педагогический институт <br />
+      <h1 className="mt-20 ml-6 mb-5 sm:pt-10 mr-10">
+       <strong> Учредитель:</strong> Бухарский государственный педагогический институт <br />
         Журнал зарегистрирован Агентством информации и массовых коммуникаций при
         Администрации Президента Республики Узбекистан свидетельством №111889 от
         08 августа 2023 года. <br />
@@ -16,11 +16,11 @@ export default function About() {
         Журнал был основан в 2023 году и выходит 1 раз в месяц. Узбекский,
         русский и английских языках.
       </h1>
-      <div>
-        <h1 className="ml-[26%] text-xl sm:items-center ml-[45%]">Лицензия</h1>
+      <div className="bg-[#f2f4fb] py-2">
+        <h1 className="ml-[50%] text-md sm:items-center md:text-2xl md:ml-[49%]">Лицензия</h1>
         <a href="./guvohnoma.pdf" target="_blank">
           <img
-            className="w-[20%] ml-72 mb-12 mt-12"
+            className="w-[30%] ml-[45%] mb-12 mt-12 sm:w-[20%] md:w-[15%] lg:shadow-xl lg:hover:shadow-2xl lg:duration-200"
             src="./guvohnomaa.jpg"
             alt=""
           />

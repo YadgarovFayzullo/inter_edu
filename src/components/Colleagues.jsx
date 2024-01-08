@@ -3,13 +3,13 @@ import React from "react";
 export default function Colleagues() {
   return (
     <div className="container flex justify-around">
-      <h1 className="mt-40 pl-6">
+      <h1 className="mt-28 pl-6">
        <strong> Главный редактор: </strong> Ядгаров Нодир Джалолович, доктор педагогических наук,
         профессор. <br />
        <strong>Председатель Общественного совета:</strong> Мамуров Баходир Бахшуллоевич, <br />
          Ректор
         Бухарского государственного педагогического института <br />
-        <h1 className="font-bold text-xl ml-[12%] mt-16 mb-12 sm:text-center mr-28">Редакционная коллегия: </h1>
+        <h1 className="font-bold text-xl ml-[12%] mt-16 mb-12 lg:ml-[43%]">Редакционная коллегия: </h1>
         Таджиходжаев Зокирходжа Абдусатторович, доктор технических наук,
         профессор. <br />
         Танирбергенов Медеубек Жуматаевич, доктор педагогических наук,
