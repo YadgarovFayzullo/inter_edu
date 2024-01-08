@@ -9,7 +9,7 @@ import { useState } from "react";
 const Navbar = () => {
   let Link = [
     { name: "Главная", link: "/" },
-    { name: "Коллегия", link: "/redaction" },
+    { name: "Редакционная коллегия", link: "/redaction" },
     { name: "Условия", link: "/rules" },
     { name: "Архив", link: "/archive" },
     { name: "О нас", link: "/about" },
@@ -27,7 +27,7 @@ const Navbar = () => {
         {/* Menu icon */}
         <div
           onClick={() => setOpen(!open)}
-          className="absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7"
+          className="absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7 "
         >
           {open ? <XMarkIcon /> : <Bars3BottomRightIcon />}
         </div>
