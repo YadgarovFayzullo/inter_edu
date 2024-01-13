@@ -18,9 +18,6 @@ i18n.use(initReactI18next).init({
   fallbackLng: "ru",
 });
 
-// const changeLang = (value) => {
-//   i18n.changeLanguage(value);
-// };
 export default function Layout({ children }) {
   const [language, setLanguage] = useState(
     localStorage.getItem("language") || "ru"
