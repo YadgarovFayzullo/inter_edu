@@ -23,6 +23,7 @@
   "journal-text": "Jurnalga quyidagi yoʻnalishlar boʻyicha maqolalar qabul qiladi: Pedagogika, psixolgiya, texnika, san’atshunoslik, arxitektura, falsafa, tarix, filologiya aniq fanlar, tabiiy fanlar, ijtimoiy-gumanitar fanlari bo‘yicha falsafa doktori (PhD) va fan doktori (DSc) ilmiy darajasiga talabgorlarning dissertatsiya ishlari yuzasidan asosiy ilmiy natijalarni o‘z ichiga oladi. Ilmiy jamoatchilikni ilm-fan natijalari bilan tanishtirish; ilm-fan rivojlantirishning dolzarb masalalariga tadqiqotlarining ustuvor yo‘nalishlari doirasida olib borilgan ilmiy ishlarning asosiy natijalari to‘g‘risida yosh olimlarning tadqiqotlari va ularning ilmiy ish natijalari to‘g‘risida ma’lumot berish; yangi istiqbolli loyihalar va texnologiyalarni joriy etish; ta’lim va tarbiya bilan bog‘liq barcha fanlar bo‘yicha nazariy va amaliy ishlar, fan va ta’limning innovatsion rivojlanishini, fundamental va amaliy tadqiqotlarni qo‘llab-quvvatlash uchun qulay axborot muhitini yaratish. Shuningdek zamonaviy ta’lim muammo va poradikmalarini o‘rganish, rivojlantirish va amaliyotga tadbiq etish bo‘yicha nazariy tavsiyalar berishdan iborat. Nashr qilingan materiallar mualliflari O‘zbekiston Respublikasi hamda yaqin va uzoq xorijning yetakchi olimlari, tadqiqotchi izlanuvchilar.",
 
   "book": "Jurnal o'qituvchi, magistrant, tadqiqotchi, oliy va professional ta’lim talabalari, hamda barcha ilmiy faoliyat uyrituvchi sub’yeкtlarga ilmiy maqolalarini nashr etish imkoniyatini beradi. Pedagogika, psixologiya, texnologiya, san'atshunoslik, arxitektura, falsafa, tarix va filologiya kabi turli sohalardagi asosiy ilmiy tadqiqot natijalarini o'z ichiga olgan maqolalarni chop ettirish tavsiya etiladi. Shuningdek, ushbu yo‘nalishlar bo‘yicha falsafa doktori (PhD) va fan doktori (DSc) ilmiy darajalariga nomzodlarning dissertatsiyalari asosidagi maqolalar mamnuniyat bilan qabul qilinadi. Bizning jurnalimiz ilmiy tadqiqotlar almashinuvi uchun platformani taklif etadi va zamonaviy ilm-fan sohasida akademik faoliyatni rag'batlantiradi.",
+  "book-two": "Jurnalimiz ochiqlik va ilmiy nashrlardan erkin foydalanish tamoyillariga amal qiladi. Shuningdek, biz tadqiqot etikasini qo'llab-quvvatlaymiz. Har bir maqola nashr etilishidan oldin taqrizchilarimiz tomonidan sinchkovlik bilan batafsil tahlil qilinadi.",
 
   "rules-doc": "Taqdim etiladigan maqolalarga qoʻyiladigan talablar:",
   "imrad": "• maqola xalqaro talab darajasidagi Imrad shaklida yozilgan boʻlishi lozim;",
@@ -52,5 +53,5 @@
   "location": " Buxoro Davlat Pedagogika Instituti",
   "license": "Litsenziya",
 
-"news": "Yangiliklar"
+  "news": "Yangiliklar"
 }
