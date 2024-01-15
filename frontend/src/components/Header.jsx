@@ -1,5 +1,5 @@
 import React from "react";
-import videoBg from "/videoBg.mp4";
+import VideoBg from "./videoBg.mp4"
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
     <div>
       <div className="overflow-x-hidden bg-fixed">
         <video
-          src={videoBg}
+          src={VideoBg}
           type="videBg.mp4"
           loop
           autoPlay
