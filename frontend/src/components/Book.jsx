@@ -15,7 +15,9 @@ export default function Book() {
         </div>
         <div>
           <p className="text-sm mt-5 mr-16 ml-5 mb-4 sm:mr-24 md:mt-[5%] sm:ml-[5%] md:ml-[30%] md:mr-[25%] lg:text-md lg:text-gray-500">
-            {t("book")}
+            {t("book")}  <br /> <br />
+            {t("book-two")}
+            {t(" ")}
           </p>
         </div>
       </div>

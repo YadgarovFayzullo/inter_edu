@@ -48,6 +48,14 @@ export default function Archived() {
                 4-{t("num")}
               </a>
             </li>
+            <li>
+              <a
+                className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
+                href="/IE&GS5.pdf"
+              >
+                5-{t("num")}
+              </a>
+            </li>
           </ul>
         </div>
         <div>
