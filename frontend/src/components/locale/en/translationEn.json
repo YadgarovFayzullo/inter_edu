@@ -53,5 +53,9 @@
   "location": " Bukhara State Pedagogical Institute",
   "license": "License",
 
-  "news": "News"
+  "news": "News",
+  
+  "partners": "Partners",
+  "AR":"Applications for displaying 3D objects based on scanned ones images in books using virtual reality (VR)."
+
 }

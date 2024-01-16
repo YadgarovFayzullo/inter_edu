@@ -10,7 +10,7 @@ import Redaction from "../pages/Redaction";
 import PubRules from "../pages/PubRules";
 import Archive from "../pages/Archive";
 import AboutUs from "../pages/AboutUs";
-
+import Partnership from "../pages/Partnership";
 
 function App() {
  
@@ -21,6 +21,7 @@ function App() {
           <Route index element={<Home/>} />
           <Route path="/home" element={<Home />} />
           <Route path="/redaction" element={<Redaction />} />
+          <Route path="/partners" element={<Partnership />} />
           <Route path="/rules" element={<PubRules />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/archive" element={<Archive />} />

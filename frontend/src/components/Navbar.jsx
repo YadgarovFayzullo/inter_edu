@@ -24,6 +24,7 @@ export default function Navbar({ changeLang }) {
     { name: t("redaction"), link: "/redaction" },
     { name: t("conditions"), link: "/rules" },
     { name: t("archive"), link: "/archive" },
+    { name: t("partners"), link: "/partners" },
     { name: t("about"), link: "/about" },
   ];
   let [open, setOpen] = useState(false);
