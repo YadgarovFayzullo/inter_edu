@@ -1,20 +1,23 @@
-import React from "react";
-// import partner from "/partner1.jpeg";
+import React, { useTransition } from "react";
+import partner from "/partner1.jpeg";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export default function Partners() {
+  const { t } = useTranslation();
   return (
-    <div className="">
-      <div className="mb-32 text-center">
+    <div className="mb-24 mt-24">
+      <div className="mb-24 text-center">
         <h1 className="text-4xl font-Arimo">Our Partners</h1>
       </div>
-      <div className="mb-5 ">
+      <div>
         <a
           href="https://play.google.com/store/apps/details?id=com.NodirYodgorov.ARProjection"
-          className="ml-10 mr-5 flex flex-col items-center h-full w-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-sm hover:shadow-md duration-200"
-        >
+          className="ml-10 mr-10 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-sm hover:shadow-md duration-200"
+          >
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            // src="/partner1.jpeg"
+            src="/partner1.jpeg"
             alt=""
           />
           <div className="flex flex-col justify-between p-4 leading-normal">
@@ -22,16 +25,14 @@ export default function Partners() {
               AR Projection
             </h5>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Veritatis, esse asperiores odio ducimus pariatur similique nihil
-              labore molestiae maiores quisquam.
+              {t("AR")}
             </p>
           </div>
         </a>
       </div>
-      <a
+      {/* <a
         href="https://play.google.com/store/apps/details?id=com.NodirYodgorov.ARProjection"
-        className="ml-10 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg hover:shadow-2xl duration-200"
+        className="ml-10 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-sm hover:shadow-md duration-200"
       >
         <img
           className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
@@ -48,7 +49,7 @@ export default function Partners() {
             molestiae maiores quisquam.
           </p>
         </div>
-      </a>
+      </a> */}
     </div>
   );
 }
