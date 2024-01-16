@@ -1,5 +1,5 @@
 import React from "react";
-import VideoBg from "./videoBg.mp4"
+import VideoBg from "/videoBg.mp4"
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
