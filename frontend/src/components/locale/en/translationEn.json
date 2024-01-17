@@ -5,19 +5,20 @@
   "archive": "Archive",
   "about": "About",
 
-  " blog": "Blog",
+  "blog": "Blog",
   "price": "Price",
   "contacts": "Contacts",
 
   "book": "The journal provides an opportunity for teachers, undergraduates, researchers and university students, as well as all interested parties to publish their scientific articles. We welcome articles containing basic scientific research results in various fields, including pedagogy, psychology, technology, art history, architecture, philosophy, history and philology. We also welcome articles based on dissertations of candidates for the degrees of Doctor of Philosophy (PhD) and Doctor of Science (DSc) in these areas. Our journal offers a platform for the exchange of scientific research and stimulates academic activity in the field of modern science.",
-"book-two": "Our journal adheres to the principles of openness and free access to scientific publications. We also insist on ethical research, and our reviewers conduct a thorough review of each article before publication.",
-" ":"If you are interested in getting your research paper published or want to stay updated with the latest scientific advances, we invite you to join our journal and share your research with the academic and scientific community.",
+  "book-two": "Our journal adheres to the principles of openness and free access to scientific publications. We also insist on ethical research, and our reviewers conduct a thorough review of each article before publication.",
+  " ": "If you are interested in getting your research paper published or want to stay updated with the latest scientific advances, we invite you to join our journal and share your research with the academic and scientific community.",
+  
   "main-red": "Chief editor",
   "name-red": "Yadgarov Nadir Djalolovich, doctor of pedagogy, professor,",
   "main-preds": "Chairman of the Public Council:",
   "name-preds": "Mamurov Bahadir Bakhshulloyevich, Rector of Bukhara State Pedagogical Institute",
   "tahrir-hayati": "Editorial team",
-  "tahrir-secondnames": "Tadjikhodjayev Zakirkhoja Abdusattorovich, doctor of technical sciences, professor Tanirbergenov Medeubek Jumataevich, doctor of pedagogic sciences, professor, academician of the Kazakhstan Academy of Pedagogical Sciences, M. Auyezov University of South Kazakhstan. Chernikova Svetlana Mikhailovna, doctor of pedagogic sciences, professor. Orel State University named after I.S. Turgenev. Saidova Mohinur Jonpolatovna, doctor of pedagogic sciences (Dsc), professor. Bukhara State Pedagogical Institute Kahhorov Siddiq Kahhorovich, Doctor of Pedagogical Sciences, Professor. Bukhara State University Olimov Shirinboy Sharofovich, Doctor of Pedagogy, Professor. Bukhara State University. Ochilov Farkhod Egamberdiyevich, candidate of pedagogical sciences, associate professor. Karshi State University. Dilshod Kadyrovich Mamatov, Doctor of Philosophy (PhD), Professor, Bukhara State University. Shovdirov Sunnat Aslanovich, Doctor of Philosophy (PhD), Associate Professor. Navoi State Pedagogical Institute. Responsible secretary: Mamurova Dilfuza Islamovna, doctor of philosophy (PhD), associate professor. Bukhara State Pedagogical Institute.Ergashov Mansur Yarashovich, professor of Bukhara State Pedagogical Institute. Ergashov Mansur Yarashovich is a professor of Bukhara State Pedagogical Institute",
+  "tahrir-secondnames": "Tadjikhodjayev Zakirkhoja Abdusattorovich, doctor of technical sciences, professor Tanirbergenov Medeubek Jumataevich, doctor of pedagogic sciences, professor, academician of the Kazakhstan Academy of Pedagogical Sciences, M. Auyezov University of South Kazakhstan. Chernikova Svetlana Mikhailovna, doctor of pedagogic sciences, professor. Orel State University named after I.S. Turgenev. Saidova Mohinur Jonpolatovna, doctor of pedagogic sciences (Dsc), professor. Bukhara State Pedagogical Institute Kahhorov Siddiq Kahhorovich, Doctor of Pedagogical Sciences, Professor. Bukhara State University Olimov Shirinboy Sharofovich, Doctor of Pedagogy, Professor. Bukhara State University. Ochilov Farkhod Egamberdiyevich, candidate of pedagogical sciences, associate professor. Karshi State University. Dilshod Kadyrovich Mamatov, Doctor of Philosophy (PhD), Professor, Bukhara State University. Shovdirov Sunnat Aslanovich, Doctor of Philosophy (PhD), Associate Professor. Navoi State Pedagogical Institute.Ergashov Mansur Yarashovich is a professor of Bukhara State Pedagogical Institute. Sayfullayeva Dilafroz Akhmadovna is a doctor of philosophy (PhD) in pedagogical sciences. Bukhara State Pedagogical Institute.",
   "masul-kotib": "Responsible Secretary:",
   "masul-name": "Mamurova Dilfuza Islamovna, doctor of philosophy (PhD) in pedagogical sciences, associate professor.",
   "masul-ped": "Bukhara State Pedagogical Institute.",
@@ -29,19 +30,18 @@
   "imrad": "• the article must be written in Imrad format of the international standard;",
   "doc-lang": "• the title of the article, annotation and keywords should be in Uzbek, Russian and English;",
   "doc-themes": "• articles should be presented with suggestions and recommendations, based on scientific and complete opinions, on current topics related to the direction of the scientific journal;",
-  "doc-format": "• maqola matnlari A4 hajmda, yuqoridan va pastdan 2 sm, chapdan 2.25 sm, oʻngdan 2.25 sm xoshiyaga ega boʻlishi kerak;",
-  "doc-style": "• maqola matni WORD matn muharririda, Times New Roman shrifti, 12 oʻlchamida, 1,15 intervalda boʻlishi va 5-10 bet hajmda boʻlishi, mualliflar soni 4 nafardan oshmasligi lozim;",
+  "doc-format": "• the text of the article should be in A4 size, with a margin of 2 cm from the top and bottom, 2.25 cm from the left, and 2.25 cm from the right;",
+  "doc-style": "• the text of the article should be in WORD text editor, Times New Roman font, size 12, 1.15 spacing and 5-10 pages, the number of authors should not exceed 4;",
   "doc-check": "• sent scientific articles are reviewed by the editorial board;",
-  "doc-license": "• unedited articles with less than 70 percent originality and not submitted according to requirements will not be published;",
-  "doc-originality": "• articles are accepted in electronic form;",
-  "doc-elect": "• for one article after the submitted article has been accepted",
-  "doc-date": "• fixed amount of payment is charged;",
-  "doc-off": "• maqolalarni qabul qilish muddati: har chorakning oxirgi oyining 25-sanasiga qadar;",
-  "doc-publish": "• official language of the journal: Uzbek, Russian, English;",
-  "doc-variant": "• publication date of the journal: on the 30th of the month;",
-  "doc-delete": "• the official website of the journal:",
-  "doc-site": "• the author will be provided with a pdf version of the article and an author's certificate;",
-  "doc-link": "• the collection form of the journal will be posted on the website on the 30th of the month;",
+  "doc-originality": "• unedited articles with less than 70 percent originality and not submitted according to requirements will not be published;",
+  "doc-elect": "• articles are accepted in electronic form.",
+  "doc-date": "deadline for accepting articles: until the 25th of each month.",
+  "doc-off": "• official language of the journal: Uzbek, Russian, English.",
+  "doc-publish": "• publication date of the journal: on the 30th of the month;",
+  "doc-variant": "• the author will be provided with a pdf version of the article and an author's certificate;",
+  "doc-delete": "• the collection form of the journal will be posted on the website on the 30th of the month;",
+  "doc-site": "• the official website of the journal",
+  "doc-link": "iegs-scientificjournal.vercel.app",
   "doc-send": "• the published paper version of the journal is distributed by mail to the authors of the articles and members of the editorial board based on a separate order.",
 
   "public-rules": "Terms of publication",
@@ -51,11 +51,11 @@
 
   "who": "Founder:",
   "location": " Bukhara State Pedagogical Institute",
+  "register": "The journal is registered by the Agency of Information and Mass Communications under the Administration of the President of the Republic of Uzbekistan with certificate No. 111889 dated August 8, 2023. It is recommended to publish the main scientific results of dissertations of candidates for the academic degrees of Doctor of Philosophy (PhD) and Doctor of Science (DSC) in pedagogy, psychology, technology, art history, architecture, philosophy, history, philology. The journal was founded in 2023 and is published once a month. Uzbek, Russian and English languages.",
   "license": "License",
 
   "news": "News",
-  
-  "partners": "Partners",
-  "AR":"Applications for displaying 3D objects based on scanned ones images in books using virtual reality (VR)."
 
+  "partners": "Partners",
+  "AR": "Applications for displaying 3D objects based on scanned ones images in books using virtual reality (VR)."
 }
