@@ -51,7 +51,7 @@ export default function Archived() {
             <li>
               <a
                 className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
-                href="/IE&GS5.pdF"
+                href="/IE&GS5.pdf"
               >
                 5-{t("num")}
               </a>
