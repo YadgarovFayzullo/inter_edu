@@ -15,7 +15,7 @@ export default function News() {
         >
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="/book2.png"
+            src="/IE&GS6.png"
             alt=""
           />
           <div className="flex flex-col justify-between p-4 leading-normal">
@@ -58,7 +58,7 @@ export default function News() {
         >
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="/stat.png"
+            src="/growing.png"
             alt=""
           />
           <div className="flex flex-col justify-between p-4 leading-normal">
