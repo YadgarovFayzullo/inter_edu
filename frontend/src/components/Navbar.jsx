@@ -26,7 +26,7 @@ export default function Navbar({ changeLang }) {
     { name: t("archive"), link: "/archive" },
     { name: t("partners"), link: "/partners" },
     { name: t("about"), link: "/about" },
-    { name: t("about"), link: "/testlist" },
+    // { name: t("about"), link: "/testlist" },
   ];
   let [open, setOpen] = useState(false);
 
