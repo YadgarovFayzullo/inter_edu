@@ -15,7 +15,7 @@ export default function About() {
         <h1 className="ml-[50%] text-md sm:items-center md:text-2xl md:ml-[49%]">
           {t("license")}
         </h1>
-        <a href="./guvohnoma.pdf" target="_blank">
+        <a href="./guvohnoma.pdf" target="blank">
           <img
             className="w-[30%] ml-[45%] mb-12 mt-12 sm:w-[20%] md:w-[15%] lg:shadow-xl lg:hover:shadow-2xl lg:duration-200"
             src="./guvohnomaa.jpg"

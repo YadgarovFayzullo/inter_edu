@@ -4,8 +4,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 
 export default function Footer() {
-  const {t} = useTranslation()
-   return (
+  const { t } = useTranslation();
+  return (
     <section className="bg-slate-950">
       <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
@@ -13,16 +13,14 @@ export default function Footer() {
             <a
               href="https://t.me/IEandGS"
               className="text-base leading-6 text-gray-500 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
-            >
-              
-            </a>
+            ></a>
           </div>
           <div className="px-5 py-2">
             <a
               href="#"
               className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
             >
-            {t('about')}
+              {t("about")}
             </a>
           </div>
           <div className="px-5 py-2">
@@ -30,7 +28,7 @@ export default function Footer() {
               href="https://t.me/IEandGS"
               className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
             >
-              {t('price')}
+              {t("price")}
             </a>
           </div>
           <div className="px-5 py-2">
@@ -38,7 +36,7 @@ export default function Footer() {
               href="https://t.me/IEandGS"
               className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
             >
-              {t('contacts')}
+              {t("contacts")}
             </a>
           </div>
           <div className="px-5 py-2">
@@ -46,11 +44,11 @@ export default function Footer() {
               href="https://t.me/IEandGS"
               className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
             >
-              {t('conditions')}
+              {t("conditions")}
             </a>
           </div>
         </nav>
-        <div className="flex justify-center mt-8 space-x-6">
+        <div className="flex justify-center mt-8 space-x-6 ml-[100px] lg:ml-[400px] ">
           <a
             className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
             href="https://t.me/IEandGS"
@@ -68,6 +66,9 @@ export default function Footer() {
             href=""
           >
             <FaFacebook size={25} />
+          </a>
+          <a target="blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1">
+          <img className="w-[45%] lg:w-[20%]"  src="cc-license.png" alt="" />
           </a>
         </div>
       </div>

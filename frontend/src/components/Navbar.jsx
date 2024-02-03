@@ -56,7 +56,7 @@ export default function Navbar({ changeLang }) {
             <li key={index} className="md:ml-8 md:my-0 my-7 font-semibold">
               <Link
                 to={link.link}
-                className="text-gray-800 hover:text-amber-400 duration-500"
+                className="text-gray-800 hover:text-amber-400 duration-200"
               >
                 {link.name}
               </Link>{" "}
