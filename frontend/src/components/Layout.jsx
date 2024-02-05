@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Partners from "./Partners"
 import SecondFooter from "./SecondFooter";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import translationsEn from "./locale/en/translationEn.json";
@@ -35,6 +36,7 @@ export default function Layout({ children }) {
       {children}
       <SecondFooter />
       <Footer />
+      <SpeedInsights />
     </div>
   );
 }
