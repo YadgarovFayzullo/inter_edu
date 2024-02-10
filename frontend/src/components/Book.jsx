@@ -8,13 +8,13 @@ export default function Book() {
       <div className="lg:flex lg:justify-around lg:mb-16">
         <div className="w-[75%] pl-12 lg:w-[75%]">
           <img
-            className="shadow-lg rounded-lg lg:justify-around lg:shadow-lg hover:shadow-2xl duration-200 lg:ml-40"
+            className="shadow-lg rounded-lg md:ml-[90px] lg:mr-[130px] lg:justify-around lg:shadow-lg hover:shadow-2xl duration-200 lg:ml-40"
             src="/book2.png"
             alt=""
           />
         </div>
         <div>
-          <p className="text-sm mt-5 mr-16 ml-5 mb-4 sm:mr-24 md:mt-[5%] sm:ml-[5%] md:ml-[30%] md:mr-[25%] lg:text-md lg:text-gray-500">
+          <p className="text-sm mt-5 mr-16 ml-5 mb-4 sm:mr-24 md:mt-[5%] sm:ml-[5%] md:ml-[140px] md:mr-[132px] lg:ml-[270px] lg:mr-[300px] lg:text-md lg:text-gray-500">
             {t("book")}  <br /> <br />
             {t("book-two")}
             {t(" ")}

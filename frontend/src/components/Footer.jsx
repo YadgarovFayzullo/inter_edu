@@ -9,7 +9,7 @@ export default function Footer() {
     <section className="bg-slate-950">
       <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
-          <div className="px-5 py-2">
+          <div className="px-13 py-2">
             <a
               href="https://t.me/IEandGS"
               className="text-base leading-6 text-gray-500 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
@@ -48,7 +48,7 @@ export default function Footer() {
             </a>
           </div>
         </nav>
-        <div className="flex justify-center mt-8 space-x-6 ml-[100px] lg:ml-[400px] ">
+        <div className="flex justify-center mt-8 space-x-6 ml-[50px] md:ml-[310px] lg:ml-[320px] ">
           <a
             className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
             href="https://t.me/IEandGS"
@@ -67,8 +67,15 @@ export default function Footer() {
           >
             <FaFacebook size={25} />
           </a>
-          <a target="blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1">
-          <img className="w-[45%] lg:w-[20%]"  src="cc-license.png" alt="" />
+          <a
+            target="blank"
+            href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1"
+          >
+            <img
+              className="w-[70%] md:w-[20%] lg:w-[20%]"
+              src="cc-license.png"
+              alt="cc license"
+            />
           </a>
         </div>
       </div>

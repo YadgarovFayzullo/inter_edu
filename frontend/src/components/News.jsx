@@ -2,11 +2,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 export default function News() {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <section className="py-10 mb-5">
       <div className="text-center">
-        <h1 className="text-[40px] font-medium">{t('news')}</h1>
+        <h1 className="text-[40px] font-medium">{t("news")}</h1>
       </div>
       <div className="lg:flex mt-12">
         <a
@@ -19,9 +19,9 @@ export default function News() {
             alt=""
           />
           <div className="flex flex-col justify-between p-4 leading-normal">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               Прием на январь
-            </h5>
+            </h2>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               Продолжается прием материалов для нового выпуска журнала. Мы
               оцениваем оригинальность, <br /> актуальность и научную значимость
@@ -41,9 +41,9 @@ export default function News() {
             alt=""
           />
           <div className="flex flex-col justify-between p-4 leading-normal">
-            <h5 className="mb-3 text-2xl font-bold tracking-tight text-gray-900">
+            <h2 className="mb-3 text-2xl font-bold tracking-tight text-gray-900">
               Идет акция
-            </h5>
+            </h2>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               Идет акция на 5-выпуск журнала.Пожалуйста, убедитесь, что ваша{" "}
               <br />
@@ -53,19 +53,17 @@ export default function News() {
           </div>
         </a>
         <br />
-        <a
-          className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xllg:justify-around lg:shadow-lg hover:shadow-2xl duration-200"
-        >
+        <a className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-lg:justify-around lg:shadow-lg hover:shadow-2xl duration-200">
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
             src="/growing.png"
             alt=""
           />
           <div className="flex flex-col justify-between p-4 leading-normal">
-           <div className="mb-5 w-full">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-              Статистика
-            </h5>
+            <div className="mb-5 w-full">
+              <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Статистика
+              </h2>
             </div>
             <p className="mb-20 font-normal text-gray-700 dark:text-gray-400">
               За месяц наш сайт был просмотрен более 5 тысяч раз со всего мира.
@@ -77,3 +75,4 @@ export default function News() {
     </section>
   );
 }
+
