@@ -36,7 +36,9 @@ export default function Navbar({ changeLang }) {
         {/* logo section */}
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
           <BookOpenIcon className="w-7 h-7 text-blue-600" />
+          <Link to={'/'}>
           <span>IE&GS</span>
+          </Link>
         </div>
         <div
           onClick={() => setOpen(!open)}

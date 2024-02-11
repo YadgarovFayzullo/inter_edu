@@ -1,12 +1,12 @@
 import React from "react";
-import VideoBg from "/videoBg.mp4"
+import VideoBg from "/VideoBg.mp4"
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const { t } = useTranslation();
   return (
     <div>
-      <div className="overflow-x-hidden bg-fixed">
+      <div className="overflow-hidden bg-fixed">
         <video
           src={VideoBg}
           type="videBg.mp4"

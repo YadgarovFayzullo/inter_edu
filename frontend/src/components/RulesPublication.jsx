@@ -8,7 +8,7 @@ export default function RulesPublication() {
       <h1 className="mt-28 mb-5 ml-7 mr-4 sm:mb-6">
         <h1 className="mb-2 font-bold md:mb-2 flex justify-center">{t("info-journal")}</h1>
         <h1>{t("journal-text")}</h1>
-        <h1 className="font-bold flex justify-center mt-4 mb-2 md:mt-7 md:mb-2 lg:mt-5 lg:mb-5">{t("rules-doc")}</h1>
+        <h1 className="font-bold text-lg flex justify-center mt-4 mb-2 md:mt-7 md:mb-2 lg:mt-5 lg:mb-5">{t("rules-doc")}</h1>
         <ul>
           <li>{t("imrad")}</li>
           <li>{t("doc-lang")}</li>
