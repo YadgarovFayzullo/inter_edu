@@ -26,6 +26,7 @@ export default function Navbar({ changeLang }) {
     { name: t("archive"), link: "/archive" },
     { name: t("partners"), link: "/partners" },
     { name: t("about"), link: "/about" },
+    // { name: t("about"), link: "/testlist" },
   ];
   let [open, setOpen] = useState(false);
 
@@ -37,25 +38,22 @@ export default function Navbar({ changeLang }) {
           <BookOpenIcon className="w-7 h-7 text-blue-600" />
           <span>IE&GS</span>
         </div>
-        {/* Menu icon */}
         <div
           onClick={() => setOpen(!open)}
           className="absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7"
         >
           {open ? <XMarkIcon /> : <Bars3BottomRightIcon />}
         </div>
-        {/* link items */}
         <ul
           className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
             open ? "top-14" : "top-[-490px]"
           }`}
         >
-        {/* <label for="countries" className="text-sm font-medium text-gray-900 dark:text-white mt-12">Select an option</label> */}
           {links.map((link, index) => (
             <li key={index} className="md:ml-8 md:my-0 my-7 font-semibold">
               <Link
                 to={link.link}
-                className="text-gray-800 hover:text-amber-400 duration-500"
+                className="text-gray-800 hover:text-amber-400 duration-200"
               >
                 {link.name}
               </Link>{" "}

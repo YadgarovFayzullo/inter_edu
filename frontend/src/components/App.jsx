@@ -11,6 +11,7 @@ import PubRules from "../pages/PubRules";
 import Archive from "../pages/Archive";
 import AboutUs from "../pages/AboutUs";
 import Partnership from "../pages/Partnership";
+import Testlist from "../pages/Testlist";
 
 function App() {
  
@@ -25,6 +26,7 @@ function App() {
           <Route path="/rules" element={<PubRules />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/archive" element={<Archive />} />
+          <Route path="/testlist" element={<Testlist />} />
         </Routes>
       </BrowserRouter>
     </div>
