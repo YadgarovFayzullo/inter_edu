@@ -8,7 +8,7 @@ export default function News() {
       <div className="text-center">
         <h1 className="text-[40px] font-medium">{t("news")}</h1>
       </div>
-      <div className="lg:flex mt-12">
+      <div className="lg:flex mt-12 max-w-[90%] pl-12 md:pl-0 md:max-w-full">
         <a
           href="https://t.me/IEandGS"
           className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg hover:shadow-2xl duration-200"
@@ -18,13 +18,13 @@ export default function News() {
             src="/IE&GS6.png"
             alt=""
           />
-          <div className="flex flex-col justify-between p-4 leading-normal">
+          <div className="flex flex-col justify-between p-2 leading-normal">
             <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               Прием на январь
             </h2>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               Продолжается прием материалов для нового выпуска журнала. Мы
-              оцениваем оригинальность, <br /> актуальность и научную значимость
+              оцениваем оригинальность, актуальность и научную значимость
               предлагаемых материалов. Благодарим вас за вашу заинтересованность
               и участие!
             </p>
@@ -40,13 +40,12 @@ export default function News() {
             src="/mainbook.jpg"
             alt=""
           />
-          <div className="flex flex-col justify-between p-4 leading-normal">
+          <div className="flex flex-col justify-between p-2 leading-normal">
             <h2 className="mb-3 text-2xl font-bold tracking-tight text-gray-900">
               Идет акция
             </h2>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Идет акция на 5-выпуск журнала.Пожалуйста, убедитесь, что ваша{" "}
-              <br />
+              Идет акция на 5-выпуск журнала.Пожалуйста, убедитесь, что ваша
               статья соответствует требованиям для подачи материалов.Благодарим
               вас за вашу заинтересованность и участие!
             </p>
@@ -59,7 +58,7 @@ export default function News() {
             src="/growing.png"
             alt=""
           />
-          <div className="flex flex-col justify-between p-4 leading-normal">
+          <div className="flex flex-col justify-between p-2 leading-normal">
             <div className="mb-5 w-full">
               <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                 Статистика
@@ -75,4 +74,3 @@ export default function News() {
     </section>
   );
 }
-

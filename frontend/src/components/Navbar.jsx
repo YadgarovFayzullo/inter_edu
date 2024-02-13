@@ -51,6 +51,7 @@ export default function Navbar({ changeLang }) {
             open ? "top-14" : "top-[-490px]"
           }`}
         >
+          ISSN 2992-9024 (Online)
           {links.map((link, index) => (
             <li key={index} className="md:ml-8 md:my-0 my-7 font-semibold">
               <Link

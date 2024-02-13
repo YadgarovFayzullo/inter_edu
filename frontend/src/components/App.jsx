@@ -11,8 +11,7 @@ import PubRules from "../pages/PubRules";
 import Archive from "../pages/Archive";
 import AboutUs from "../pages/AboutUs";
 import Partnership from "../pages/Partnership";
-import Testlist from "../pages/Testlist";
-
+import Officials from "./Officials";
 function App() {
  
   return (
@@ -20,13 +19,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home/>} />
-          <Route path="/home" element={<Home />} />
           <Route path="/redaction" element={<Redaction />} />
           <Route path="/partners" element={<Partnership />} />
           <Route path="/rules" element={<PubRules />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/archive" element={<Archive />} />
-          <Route path="/testlist" element={<Testlist />} />
+          <Route path="/officials" element={<Officials />} />
         </Routes>
       </BrowserRouter>
     </div>

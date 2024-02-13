@@ -72,7 +72,7 @@ export default function Footer() {
             href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1"
           >
             <img
-              className="w-[40%] md:w-[20%] lg:w-[20%]"
+              className="w-[50%] md:w-[20%] lg:w-[20%]"
               src="cc-license.png"
               alt="cc license"
             />
