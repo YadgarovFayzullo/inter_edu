@@ -15,12 +15,12 @@ export default function News() {
         >
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="/IE&GS6.png"
+            src="/IE&GS7.png"
             alt=""
           />
           <div className="flex flex-col justify-between p-2 leading-normal">
             <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-              Прием на январь
+              Прием на новый выпуск
             </h2>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               Продолжается прием материалов для нового выпуска журнала. Мы
@@ -42,10 +42,10 @@ export default function News() {
           />
           <div className="flex flex-col justify-between p-2 leading-normal">
             <h2 className="mb-3 text-2xl font-bold tracking-tight text-gray-900">
-              Идет акция
+              Ознокомтесь правилами
             </h2>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Идет акция на 5-выпуск журнала.Пожалуйста, убедитесь, что ваша
+              Пожалуйста, убедитесь, что ваша
               статья соответствует требованиям для подачи материалов.Благодарим
               вас за вашу заинтересованность и участие!
             </p>

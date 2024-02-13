@@ -13,14 +13,10 @@ export default function Colleagues() {
           {t("name-preds")}
         </h1>
         <div class="flex justify-center items-center pt-5 pb-5">
-  <div class="font-bold text-lg text-center lg:text-xl">
-    {t("tahrir-hayati")}
-  </div>
-</div>
-
-
-
-
+          <div class="font-bold text-lg text-center lg:text-xl">
+            {t("tahrir-hayati")}
+          </div>
+        </div>
 
         <div>{t("tahrir-secondnames")}</div>
         <p className="mb-6 md:mt-[20px]">
