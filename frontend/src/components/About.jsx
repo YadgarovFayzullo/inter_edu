@@ -15,7 +15,7 @@ export default function About() {
         <br />
         {t("created")}
       </h1>
-      <div className="bg-[#f2f4fb] py-2">
+      <div className="bg-[#f2f4fb] flex flex-col py-2">
         <h1 className="ml-[130px] text-md sm:items-center md:text-2xl md:ml-[300px] lg:ml-[660px]">
           {t("license")}
         </h1>

@@ -8,10 +8,10 @@ export default function News() {
       <div className="text-center">
         <h1 className="text-[40px] font-medium">{t("news")}</h1>
       </div>
-      <div className="lg:flex mt-12 max-w-[90%] pl-12 md:pl-0 md:max-w-full">
+      <div className=" lg:flex mt-12 max-w-[90%] pl-12 md:pl-0 md:max-w-full">
         <a
           href="https://t.me/IEandGS"
-          className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg hover:shadow-2xl duration-200"
+          className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg duration-300 hover:-translate-y-1"
         >
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
@@ -33,7 +33,7 @@ export default function News() {
         <br />
         <a
           href="https://t.me/IEandGS"
-          className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg hover:shadow-2xl duration-200"
+          className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg duration-300 hover:-translate-y-1"
         >
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
@@ -41,7 +41,7 @@ export default function News() {
             alt=""
           />
           <div className="flex flex-col justify-between p-2 leading-normal">
-            <h2 className="mb-3 text-2xl font-bold tracking-tight text-gray-900">
+            <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               Ознокомтесь правилами
             </h2>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -52,7 +52,7 @@ export default function News() {
           </div>
         </a>
         <br />
-        <a className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-lg:justify-around lg:shadow-lg hover:shadow-2xl duration-200">
+        <a className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg duration-300 hover:-translate-y-1">
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
             src="/growing.png"
@@ -64,7 +64,7 @@ export default function News() {
                 Статистика
               </h2>
             </div>
-            <p className="mb-20 font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               За месяц наш сайт был просмотрен более 5 тысяч раз со всего мира.
               Следите за нами чтобы не пропускать новости
             </p>
