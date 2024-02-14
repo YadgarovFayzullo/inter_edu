@@ -11,7 +11,7 @@ export default function News() {
       <div className=" lg:flex mt-12 max-w-[90%] pl-12 md:pl-0 md:max-w-full">
         <a
           href="https://t.me/IEandGS"
-          className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg duration-300 hover:-translate-y-1"
+          className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg hover:shadow-xl duration-200 "
         >
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
@@ -33,7 +33,7 @@ export default function News() {
         <br />
         <a
           href="https://t.me/IEandGS"
-          className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg duration-300 hover:-translate-y-1"
+          className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg duration-300  hover:shadow-xl duration-200"
         >
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
@@ -52,7 +52,7 @@ export default function News() {
           </div>
         </a>
         <br />
-        <a className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg duration-300 hover:-translate-y-1">
+        <a className="ml-5 mr-5 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-lg duration-300  hover:shadow-xl duration-200">
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
             src="/growing.png"

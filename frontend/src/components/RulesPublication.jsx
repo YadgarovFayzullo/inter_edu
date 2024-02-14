@@ -51,7 +51,7 @@ export default function RulesPublication() {
         <a href="./maqola_talablari.pdf" target="_blank">
           <img
             className="w-[30%] ml-[120px] mb-12 mt-6 md:ml-[635px] lg:shadow-xl lg:hover:shadow-2xl lg:duration-200 sm:w-[20%] md:w-[15%]"
-            src="./talab.png"
+            src="./rules.png"
             alt="Maqola Talablari"
           />
         </a>
