@@ -36,7 +36,9 @@ export default function Navbar({ changeLang }) {
         {/* logo section */}
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
           <BookOpenIcon className="w-7 h-7 text-blue-600" />
+          <Link to={'/'}>
           <span>IE&GS</span>
+          </Link>
         </div>
         <div
           onClick={() => setOpen(!open)}
@@ -49,6 +51,11 @@ export default function Navbar({ changeLang }) {
             open ? "top-14" : "top-[-490px]"
           }`}
         >
+          <div className="mt-5 md:mt-0">
+          <a target="blank" href="https://portal.issn.org/resource/ISSN/2992-9024">
+          ISSN 2992-9024 (Online)
+          </a>
+          </div>
           {links.map((link, index) => (
             <li key={index} className="md:ml-8 md:my-0 my-7 font-semibold">
               <Link

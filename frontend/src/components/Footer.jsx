@@ -48,7 +48,7 @@ export default function Footer() {
             </a>
           </div>
         </nav>
-        <div className="flex justify-center mt-8 space-x-6 ml-[50px] md:ml-[310px] lg:ml-[320px] ">
+        <div className="flex justify-center mt-8 space-x-6 ml-[80px] md:ml-[310px] lg:ml-[320px] ">
           <a
             className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
             href="https://t.me/IEandGS"
@@ -72,7 +72,7 @@ export default function Footer() {
             href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1"
           >
             <img
-              className="w-[70%] md:w-[20%] lg:w-[20%]"
+              className="w-[50%] md:w-[20%] lg:w-[20%]"
               src="cc-license.png"
               alt="cc license"
             />

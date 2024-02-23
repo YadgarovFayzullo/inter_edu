@@ -4,17 +4,20 @@ import { useTranslation } from "react-i18next";
 export default function Colleagues() {
   const { t } = useTranslation();
   return (
-    <div className="container flex justify-around">
-      <div className="mt-28 pl-6 lg:ml-5">
+    <div className="flex justify-center">
+      <div className="mt-24 pl-1 lg:ml-2">
         <h1>
           <strong>{t("main-red")}</strong> {t("name-red")}
           <br />
           <strong>{t("main-preds")}</strong>
           {t("name-preds")}
         </h1>
-        <div className="font-bold text-xl ml-[30px] mt-16 mb-12 md:ml-[300px] lg:ml-[49%]">
-          {t("tahrir-hayati")}
+        <div className="flex justify-center pt-5 pb-5">
+          <div className="font-bold text-lg text-center lg:text-xl">
+            {t("tahrir-hayati")}
+          </div>
         </div>
+
         <div>{t("tahrir-secondnames")}</div>
         <p className="mb-6 md:mt-[20px]">
           <strong className="text-bold"> {t("masul-kotib")} </strong>
