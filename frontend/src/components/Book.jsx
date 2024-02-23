@@ -8,7 +8,7 @@ export default function Book() {
       <div className="lg:w-1/3 lg:ml-24 xl:ml-[100px] flex justify-center">
         <img
           className="shadow-lg rounded-lg lg:ml-1 lg:mr-0 lg:shadow-lg hover:shadow-2xl duration-200 w-[70%] md:w-4/6 lg:w-full xl:w-2/3"
-          src="/book2.png"
+          src="IE&GS7.png"
           alt=""
         />
       </div>

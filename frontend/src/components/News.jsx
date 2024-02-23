@@ -15,7 +15,7 @@ export default function News() {
         >
           <img
             className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="/IE&GS7.png"
+            src="/Book8.png"
             alt=""
           />
           <div className="flex flex-col justify-between p-2 leading-normal">

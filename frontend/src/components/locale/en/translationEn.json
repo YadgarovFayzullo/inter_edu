@@ -59,5 +59,15 @@
   "news": "News",
 
   "partners": "Partners",
-  "AR": "Applications for displaying 3D objects based on scanned ones images in books using virtual reality (VR)."
+  "AR": "Applications for displaying 3D objects based on scanned ones images in books using virtual reality (VR).",
+
+  "about-main": "Journal",
+  "connect": "Connect",
+  "manzil": "Address:",
+  "loc-target": "st. Yangi yol, 51, Bukhara, Republic of Uzbekistan, 200100",
+  "email": "E-mail:",
+  "email-target": "nodirbekyadgarov@gmail.com",
+  "email-second": "pedagogicalperspective2023@gmail.com",
+  "phone": "Tel",
+  "phone-target":"+998(97) 300-34-00"
 }

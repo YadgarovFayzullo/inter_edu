@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export default function Colleagues() {
   const { t } = useTranslation();
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mr-2 ml-3">
       <div className="mt-24 pl-1 lg:ml-2">
         <h1>
           <strong>{t("main-red")}</strong> {t("name-red")}
