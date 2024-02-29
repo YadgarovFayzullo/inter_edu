@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { BsTelegram } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { MdLocationOn } from "react-icons/md";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -69,7 +68,7 @@ export default function Footer() {
               href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1"
             >
               <img
-                className="w-[50%] md:w-[20%] lg:w-[20%]"
+                className="w-[30%] md:w-[20%] lg:w-[20%]"
                 src="cc-license.png"
                 alt="cc license"
               />
@@ -93,7 +92,7 @@ export default function Footer() {
               <FaFacebook size={25} />
             </a>
           </div>
-          <div className="my-5 text-gray-600">
+          <div className="my-5 text-gray-400">
             © Copyright 2024. All Rights Reserved.
           </div>
         </div>

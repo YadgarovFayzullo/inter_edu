@@ -53,7 +53,7 @@ export default function RulesPublication() {
         <div className="text-sm  sm:text-xl lg:text-xl text-center text-white mb-1 bg-[#5d9cec] px-7 sm:px-14 md:px-13 lg:px-6">
           {t("public-rules")}
         </div>
-        <a href="./maqola_talablari.pdf" target="_blank">
+        <a href="./maqola-talablari.pdf" target="_blank">
           <img
             className="w-[50%] sm:w-[50%] md:w-[60%] lg:w-[40%] max-w-[600px] mb-12 lg:shadow-xl lg:hover:shadow-2xl lg:duration-200 mx-auto"
             src="./rules.png"
