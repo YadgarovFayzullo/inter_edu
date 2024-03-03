@@ -10,7 +10,7 @@ export default function Colleagues() {
           <strong>{t("main-red")}</strong> {t("name-red")}
           <br />
           <strong>{t("main-preds")}</strong>
-          {t("name-preds")}
+         {t("name-preds")}
         </h1>
         <div className="flex justify-center pt-5 pb-5">
           <div className="font-bold text-lg text-center lg:text-xl">

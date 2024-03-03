@@ -14,49 +14,34 @@ export default function Footer() {
           </div>
           <div className="p-5">
             <div className="text-gray-500 inline-block text-2xl pb-4 mb-4 border-b-4 border-amber-500">
-              {t("about-main")}
-            </div>
-            <a
-              className="my-3 block hover:text-amber-400 "
-              href="https://t.me/IEandGS"
-            >
-              {t("about")}
-            </a>
-            <a
-              className="my-3 block hover:text-amber-400 "
-              href="https://t.me/IEandGS"
-            >
-              {t("price")}
-            </a>
-            <a
-              className="my-3 block hover:text-amber-400 "
-              href="https://t.me/IEandGS"
-            >
-              {t("contacts")}
-            </a>
-          </div>
-          <div className="p-5">
-            <div className="inline-block text-2xl pb-4 mb-4 border-b-4 border-amber-500 text-gray-500">
-              Support
-            </div>
-            <a className="my-3 block hover:text-amber-400" href="/#">
-              Help Center
-            </a>
-            <a className="my-3 block hover:text-amber-400" href="/#">
-              Privacy Policy
-            </a>
-            <a className="my-3 block hover:text-amber-400" href="/#">
-              Conditions
-            </a>
-          </div>
-          <div className="p-5">
-            <div className="inline-block text-2xl pb-4 mb-4 border-b-4 border-amber-500 text-gray-500">
-              {t("connect")}
+              {t("redaction-footer")}
             </div>
             <a className="my-3 block">{t("loc-target")}</a>
             <a className="my-3 block">{t("email-target")}</a>
-            <a className="my-3 block">{t("email-second")}</a>
+   
             <a className="my-3 block">{t("phone-target")}</a>
+          </div>
+          <div className="p-5">
+            <div className="inline-block text-2xl pb-4 mb-4 border-b-4 border-amber-500 text-gray-500">
+              {t("publisher-footer")}
+            </div>
+            <a className="my-3 block">{t("address-footer")}</a>
+          </div>
+          <div className="p-5">
+            <div className="inline-block text-2xl pb-4 mb-4 border-b-4 border-amber-500 text-gray-500">
+              {t("main-footer")}
+            </div>
+
+            <a className="my-3 block">{t("footer-inst")}</a>
+            <a className="my-3 block">{t("institute-address")}</a>
+            <a className="my-3 block">{t("footer-phone")}</a>
+            <a
+              className="hover:text-amber-400"
+              target="blank"
+              href="https://buxdpi.uz"
+            >
+              https://buxdpi.uz
+            </a>
           </div>
         </div>
       </div>
@@ -99,4 +84,25 @@ export default function Footer() {
       </div>
     </footer>
   );
+}
+
+{
+  /* <a className="my-3 block">{t("loc-target")}</a>
+<a className="my-3 block">{t("email-target")}</a>
+<a className="my-3 block">{t("email-second")}</a>
+<a className="my-3 block">{t("phone-target")}</a> */
+}
+
+{
+  /* <a className="my-3 block">{t("address-footer")}</a>
+<a className="my-3 block">{t("footer-inst")}</a>
+<a className="my-3 block">{t("institute-address")}</a>
+<a className="my-3 block">{t("footer-phone")}</a>
+<a
+  className="hover:text-amber-400"
+  target="blank"
+  href="https://buxdpi.uz"
+>
+  https://buxdpi.uz
+</a> */
 }

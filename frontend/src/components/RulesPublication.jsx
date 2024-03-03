@@ -42,7 +42,6 @@ export default function RulesPublication() {
               className="font-bold flex"
               href="https://iegs-scientificjournal.vercel.app"
             >
-              {" "}
               iegs-scientificjournal.vercel.app
             </a>
           </li>

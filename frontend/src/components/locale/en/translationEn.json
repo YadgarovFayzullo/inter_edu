@@ -60,6 +60,7 @@
 
   "partners": "Partners",
   "AR": "Applications for displaying 3D objects based on scanned ones images in books using virtual reality (VR).",
+  "3D": "Educational 3D videos about descriptive geometry",
 
   "about-main": "Journal",
   "connect": "Connect",
@@ -69,5 +70,10 @@
   "email-target": "nodirbekyadgarov@gmail.com",
   "email-second": "pedagogicalperspective2023@gmail.com",
   "phone": "Tel",
-  "phone-target":"+998(97) 300-34-00"
+  "phone-target":"+998(97) 300-34-00",
+
+  "address-footer": "Publishing house: «Buxoro determinanti» Address: 200100, Bukhara, Namozgox 24",
+  "institute-address": "Bukhara city, Piridastgir street, 2nd house",
+  "footer-phone": "0 (365) 226-10-97",
+  "footer-inst": "BukhSPI"
 }

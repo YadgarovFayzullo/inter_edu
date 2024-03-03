@@ -59,7 +59,7 @@
 
   "partners": "Hamkorlar",
   "AR": "Kitobdagi 3D ob'ektlarni virtual haqiqat (VR) texnologiyasi asosida ko'rsatish imkoniyatini yaratuvchi mobil dastur.",
-
+  "3D": "Tasviy geometriyasi haqida ta'limiy 3D videolar",
   "about-main": "Jurnal",
   "connect": "Bog'lanish",
   "manzil": "Manzil:",
@@ -68,5 +68,10 @@
   "email-target": "nodirbekyadgarov@gmail.com",
   "email-second": "pedagogicalperspective2023@gmail.com",
   "phone": "Tel",
-  "phone-target":"+998(97) 300-34-00"
+  "phone-target":"+998(97) 300-34-00",
+
+  "address-footer": "Nashriyot: MCHJ «Buxoro determinanti» Manzil: 200100, Buxoro, Namozgox 24",
+  "institute-address": "Bukhara city, Piridastgir street, 2nd house",
+  "footer-phone": "0 (365) 226-10-97",
+  "footer-inst": "BuxDPI"
 }
