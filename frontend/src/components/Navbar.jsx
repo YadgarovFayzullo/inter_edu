@@ -36,8 +36,10 @@ export default function Navbar({ changeLang }) {
         {/* logo section */}
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
           <BookOpenIcon className="w-7 h-7 text-blue-600" />
-          <Link to={'/'}>
-          <span>IE&GS</span>
+          <Link to={"/"}>
+            <h1>
+              <span>IE&GS</span>
+            </h1>
           </Link>
         </div>
         <div
@@ -52,9 +54,12 @@ export default function Navbar({ changeLang }) {
           }`}
         >
           <div className="mt-5 md:mt-0">
-          <a target="blank" href="https://portal.issn.org/resource/ISSN/2992-9024">
-          ISSN 2992-9024 (Online)
-          </a>
+            <a
+              target="blank"
+              href="https://portal.issn.org/resource/ISSN/2992-9024"
+            >
+              ISSN 2992-9024 (Online)
+            </a>
           </div>
           {links.map((link, index) => (
             <li key={index} className="md:ml-8 md:my-0 my-7 font-semibold">
@@ -66,15 +71,15 @@ export default function Navbar({ changeLang }) {
               </Link>{" "}
             </li>
           ))}
-        <select
-          id="countries"
-          className="bg-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 lg:ml-3 font-Arimo"
-          onChange={changeLanguageHandler}
-        >
-          <option value="ru">Русский</option>
-          <option value="uz">O'zbek</option>
-          <option value="en">English</option>
-        </select>
+          <select
+            id="countries"
+            className="bg-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 lg:ml-3 font-Arimo"
+            onChange={changeLanguageHandler}
+          >
+            <option value="ru">Русский</option>
+            <option value="uz">O'zbek</option>
+            <option value="en">English</option>
+          </select>
         </ul>
       </div>
     </div>
