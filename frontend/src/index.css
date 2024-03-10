@@ -9,56 +9,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.link:link,
-.link:visited {
-  color: #333;
-  text-decoration: none;
-  position: relative;
-}
-
-.link::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #333;
-  bottom: 0;
-  left: 0;
-  transform: scale(0);
-  transition: 0.2s all ease-out;
-}
-
-.link:hover::after {
-  transform: scale(1);
-}
-
-.tipo {
-  --color: #d6c64e; /* the border color */
-  --border: 5px; /* the border thickness*/
-  --offset: 20px; /* control the offset*/
-  --gap: 5px; /* the gap on hover */
-
-  --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),
-    var(--color) 0;
-  --_o: calc(3 * var(--offset));
-  padding: calc(var(--gap) + var(--border))
-    calc(var(--gap) + var(--border) + var(--offset))
-    calc(var(--gap) + var(--border) + var(--offset))
-    calc(var(--gap) + var(--border));
-  background: linear-gradient(var(--_c)) var(--_o) var(--_o),
-    linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
-  background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
-  background-repeat: no-repeat;
-  filter: grayscale(0.4);
-  transition: 0.5s;
-  cursor: pointer;
-}
-.tipo:hover {
-  background-position: 0px 0px;
-  background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
-  filter: grayscale(0);
-}
-
 .first-body {
   /* display: grid; */
   gap: 40px;
@@ -82,8 +32,8 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  
-  width :34px;
+
+  width: 34px;
   height: 75px;
 }
 .mousey {
@@ -102,11 +52,19 @@
   background-color: #fff;
   animation-name: scroll;
   animation-duration: 1.2s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
   animation-iteration-count: infinite;
 }
 @keyframes scroll {
-  0% { opacity: 0; }
-  10% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(15px); opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
 }

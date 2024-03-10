@@ -8,12 +8,12 @@ export default function Partners() {
       <div className="mb-24 text-center">
         <h1 className="text-4xl font-bold">{t("partners")}</h1>
       </div>
-      <div className="flex justify-around">
-        <div>
+      <div className="flex justify-around flex-wrap gap-4">
+        <div className=""> 
           <a
             target="blank"
             href="https://play.google.com/store/apps/details?id=com.NodirYodgorov.ARProjection"
-            className="ml-10 mr-10 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-sm hover:shadow-md duration-200"
+            className="ml-10 mr-10 flex flex-col bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl lg:justify-around lg:shadow-sm hover:shadow-md duration-200"
           >
             <img
               className="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
