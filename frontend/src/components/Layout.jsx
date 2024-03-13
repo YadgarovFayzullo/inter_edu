@@ -8,7 +8,7 @@ import { initReactI18next } from "react-i18next";
 import translationsEn from "./locale/en/translationEn.json";
 import translationsRu from "./locale/ru/translationsRu.json";
 import translationsUz from "./locale/uz/translationsUz.json";
-import InfinityScroll from './InfinityScroll'
+
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -34,7 +34,6 @@ export default function Layout({ children }) {
     <div>
       <Navbar changeLang={setLanguage} />
       {children}
-      {/* <InfinityScroll />  */}
       <SecondFooter />
       <Footer />
       <SpeedInsights />
