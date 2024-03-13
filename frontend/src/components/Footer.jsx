@@ -18,7 +18,7 @@ export default function Footer() {
             </div>
             <a className="my-3 block">{t("loc-target")}</a>
             <a className="my-3 block">{t("email-target")}</a>
-   
+
             <a className="my-3 block">{t("phone-target")}</a>
           </div>
           <div className="p-5">
@@ -59,18 +59,21 @@ export default function Footer() {
               />
             </a>
             <a
+              target="blank"
               href="https://t.me/IEandGS"
               className="w-6 mx-1 hover:text-gray-400"
             >
               <BsTelegram size={25} />
             </a>
             <a
-              href="https://t.me/IEandGS"
+              target="blank"
+              href="https://instagram.com/intereduglobalstudy/"
               className="w-6 mx-1 hover:text-gray-400"
             >
               <FaInstagram size={25} />
             </a>
             <a
+              target="blank"
               href="https://t.me/IEandGS"
               className="w-6 mx-1 hover:text-gray-400"
             >
@@ -84,25 +87,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
-
-{
-  /* <a className="my-3 block">{t("loc-target")}</a>
-<a className="my-3 block">{t("email-target")}</a>
-<a className="my-3 block">{t("email-second")}</a>
-<a className="my-3 block">{t("phone-target")}</a> */
-}
-
-{
-  /* <a className="my-3 block">{t("address-footer")}</a>
-<a className="my-3 block">{t("footer-inst")}</a>
-<a className="my-3 block">{t("institute-address")}</a>
-<a className="my-3 block">{t("footer-phone")}</a>
-<a
-  className="hover:text-amber-400"
-  target="blank"
-  href="https://buxdpi.uz"
->
-  https://buxdpi.uz
-</a> */
 }

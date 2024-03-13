@@ -30,9 +30,9 @@ export default function RulesPublication() {
             {t("doc-site")}
             <a
               className="font-bold ml"
-              href="https://iegs-scientificjournal.vercel.app"
+              href="https://intereduglobalstudy.com"
             >
-              iegs-scientificjournal.vercel.app
+              intereduglobalstudy.com
             </a>
           </li>
           <li>{t("doc-variant")}</li>
@@ -40,9 +40,9 @@ export default function RulesPublication() {
             {t("doc-delete")}
             <a
               className="font-bold flex"
-              href="https://iegs-scientificjournal.vercel.app"
+              href="https://intereduglobalstudy.com"
             >
-              iegs-scientificjournal.vercel.app
+              intereduglobalstudy.com
             </a>
           </li>
           <li>{t("doc-send")}</li>

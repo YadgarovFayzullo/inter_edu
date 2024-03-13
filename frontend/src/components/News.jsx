@@ -24,7 +24,7 @@ function NewsSection() {
       title: "Ознокомтесь правилами",
       description:
         "Пожалуйста, убедитесь, что ваша статья соответствует требованиям для подачи материалов. Благодарим вас за вашу заинтересованность и участие!",
-      imageUrl: "/mainbook.jpg",
+      imageUrl: "/news-new2.jpeg",
       link: "https://t.me/IEandGS",
     },
     {
