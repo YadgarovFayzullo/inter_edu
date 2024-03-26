@@ -70,7 +70,7 @@ export default function Navbar({ changeLang }) {
               </Link>{" "}
             </li>
           ))}
-          <Link className="sm:block md:hidden btn1" to={"Login"}>
+          <Link className="sm:block md:hidden btn1" to={"login"}>
           <button className="flex md:ml-3 border px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded focus:outline-none focus:shadow-outline">Войти</button>
           </Link>
           <select
@@ -82,7 +82,7 @@ export default function Navbar({ changeLang }) {
             <option value="uz">O'zbek</option>
             <option value="en">English</option>
           </select>
-          <Link className="md:block hidden btn2" to={"Login"}>
+          <Link className="md:block hidden btn2" to={"login"}>
           <button className="flex md:ml-3 border px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded focus:outline-none focus:shadow-outline">Войти</button>
           </Link>
         </ul>

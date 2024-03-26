@@ -21,7 +21,7 @@ export default function Registration() {
     setEmail("");
     setPassword("");
   };
-
+  
   return (
     <div className="flex flex-col items-center justify-center pt-24 md:min-h-screen py-2">
       <div className="bg-white md:shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
