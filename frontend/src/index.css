@@ -10,9 +10,7 @@
 @tailwind utilities;
 
 .first-body {
-  /* display: grid; */
   gap: 40px;
-  /* height: 100vh; */
   margin: 0;
   grid-auto-flow: column;
   place-content: center;

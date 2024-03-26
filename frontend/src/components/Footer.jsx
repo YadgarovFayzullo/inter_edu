@@ -7,7 +7,7 @@ export default function Footer() {
   const { t } = useTranslation();
   return (
     <footer>
-      <div className="bg-slate-950">
+      <div className="bg-slate-950 text-sm">
         <div className="max-w-screen-lg px-4 sm:px-6 text-gray-300 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
           <div className="p-5">
             <h3 className="font-bold text-xl text-gray-500">IE&GS</h3>
@@ -40,7 +40,7 @@ export default function Footer() {
               target="blank"
               href="https://buxdpi.uz"
             >
-              https://buxdpi.uz
+              buxdpi.uz
             </a>
           </div>
         </div>
