@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./Sidebar"; 
+import Sidebar from "./Sidebar";
 import Home from "../pages/Home";
 import Redaction from "../pages/Redaction";
 import PubRules from "../pages/PubRules";
@@ -16,10 +16,8 @@ import AdminPartners from "../pages/AdminPartners";
 import AdminArchive from "../pages/AdminArchive";
 
 function App() {
- 
   const [isAdmin, setIsAdmin] = useState(false);
 
-  
   const setAdminStatus = (status) => {
     setIsAdmin(status);
   };
@@ -27,7 +25,6 @@ function App() {
   return (
     <div>
       <Router>
-
         {isAdmin && <Sidebar />}
         <Routes>
           <Route index element={<Home />} />
@@ -37,7 +34,10 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/archive" element={<Archive />} />
           <Route path="/officials" element={<Officials />} />
-          <Route path="/login" element={<Login setAdminStatus={setAdminStatus} />} />
+          <Route
+            path="/login"
+            element={<Login setAdminStatus={setAdminStatus} />}
+          />
           <Route path="/admin" element={<Admin />} />
           {/* admin pages */}
           <Route path="/adminNews" element={<AdminNews />} />

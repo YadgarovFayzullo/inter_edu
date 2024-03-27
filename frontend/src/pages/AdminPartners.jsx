@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 
 export default function AdminPartners() {
@@ -6,31 +6,58 @@ export default function AdminPartners() {
   const [text, setText] = useState("");
   const [image, setImage] = useState(null);
   const [newsList, setNewsList] = useState([]);
-  const [error, setError] = useState("");
+  const [titleError, setTitleError] = useState("");
+  const [textError, setTextError] = useState("");
+  const [imageError, setImageError] = useState("");
+  const [date, setDate] = useState("");
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     setImage(file);
   };
 
-  const addNews = () => {
-    if (!title || !text || !image) {
-      setError("Пожалуйста,загрузите фото,заполните загаловок и описание");
-      return;
+  const addPartners = () => {
+    let titleErrorText = "";
+    let textErrorText = "";
+    let imageErrorText = "";
+
+    if (!title) {
+      titleErrorText = "Пожалуйста, заполните заголовок";
     }
 
-    const newsItem = {
-      id: Date.now(),
-      title: title,
-      text: text,
-      image: image,
-    };
-    setNewsList([...newsList, newsItem]);
+    if (!text) {
+      textErrorText = "Пожалуйста, заполните описание";
+    }
 
-    setTitle("");
-    setText("");
-    setImage(null);
-    setError("");
+    if (!image) {
+      imageErrorText = "Пожалуйста, загрузите изображение";
+    }
+
+    setTitleError(titleErrorText);
+    setTextError(textErrorText);
+    setImageError(imageErrorText);
+
+    if (title && text && image) {
+      const newsItem = {
+        id: Date.now(),
+        title: title,
+        text: text,
+        image: image,
+        date: date,
+      };
+
+      setNewsList([...newsList, newsItem]);
+
+      setTitle("");
+      setText("");
+      setImage(null);
+      setDate(new Date().toISOString().split("T")[0]);
+
+      // Reset errors
+      setTitleError("");
+      setTextError("");
+      setImageError("");
+    }
   };
 
   const deletePartners = (id) => {
@@ -42,7 +69,9 @@ export default function AdminPartners() {
       <Sidebar />
       <div className="flex-1 p-0 flex flex-col items-start">
         <div className="bg-white p-6 rounded-lg w-full mb-4">
-          <h2 className="text-2xl font-semibold mb-4">ПАРТНЕРЫ</h2>
+          <h1 className="text-2xl font-semibold mb-4 font-Arimo text-blue-500">
+            ПАРТНЕРЫ
+          </h1>
           <form>
             <div className="mb-4">
               <label
@@ -57,8 +86,12 @@ export default function AdminPartners() {
                 className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
                 placeholder="Введите заголовок"
                 value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                  setTitleError(""); // Reset error when changing title
+                }}
               />
+              {titleError && <p className="text-red-500">{titleError}</p>}
             </div>
             <div className="mb-4">
               <label
@@ -73,8 +106,12 @@ export default function AdminPartners() {
                 placeholder="Введите описание"
                 rows="4"
                 value={text}
-                onChange={(e) => setText(e.target.value)}
+                onChange={(e) => {
+                  setText(e.target.value);
+                  setTextError(""); // Reset error when changing text
+                }}
               ></textarea>
+              {textError && <p className="text-red-500">{textError}</p>}
             </div>
             <div className="mb-4">
               <label
@@ -88,20 +125,23 @@ export default function AdminPartners() {
                 id="image"
                 className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
                 accept="image/*"
-                onChange={handleImageUpload}
+                onChange={(e) => {
+                  handleImageUpload(e);
+                  setImageError(""); // Reset error when changing image
+                }}
               />
+              {imageError && <p className="text-red-500">{imageError}</p>}
             </div>
-            {error && <p className="text-red-500 mb-4">{error}</p>}
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
-              onClick={addNews}
+              onClick={addPartners}
             >
               Добавить партнера
             </button>
           </form>
         </div>
-        <h3 className="text-xl font-semibold pl-4">История действий</h3>
+        <h3 className="text-xl font-semibold pl-6">История действий</h3>
         <div className="max-w-lg w-full pl-3">
           {newsList.map((newsItem) => (
             <div
@@ -112,11 +152,13 @@ export default function AdminPartners() {
                 <img
                   src={URL.createObjectURL(newsItem.image)}
                   alt="Partner Image"
-                  className="w-[50%] h-auto rounded-md mr-4"
+                  className="w-[20%] h-auto rounded-md mr-4"
                 />
               )}
               <div>
-                <h3 className="text-lg font-semibold mb-2">{newsItem.title}</h3>
+                <h3 className="text-lg font-semibold mb-2 ">
+                  {newsItem.title}
+                </h3>
                 <p className="text-gray-700 mb-2">{newsItem.text}</p>
                 <div className="flex">
                   <button

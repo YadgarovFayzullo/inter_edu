@@ -9,6 +9,8 @@ export default function AdminBook() {
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     setImage(file);
+  
+    setError("");
   };
 
   const addBook = () => {
@@ -24,6 +26,7 @@ export default function AdminBook() {
     setImageList([...imageList, bookItem]);
 
     setImage(null);
+   
     setError("");
   };
 
@@ -36,7 +39,7 @@ export default function AdminBook() {
       <Sidebar />
       <div className="flex-1 p-0 flex flex-col items-start">
         <div className="bg-white p-6 rounded-lg w-full mb-4">
-          <h2 className="text-2xl font-semibold mb-4">ОБЛОЖКА</h2>
+          <h1 className="text-2xl font-semibold mb-4 font-Arimo text-blue-500">ОБЛОЖКА</h1>
           <form>
             <div className="mb-4">
               <label
@@ -63,7 +66,7 @@ export default function AdminBook() {
             </button>
           </form>
         </div>
-        <h3 className="text-xl font-semibold pl-4">История действий</h3>
+        <h3 className="text-xl font-semibold pl-6">История действий</h3>
         <div className="max-w-lg w-full pl-3">
           {imageList.map((bookItem) => (
             <div
@@ -74,7 +77,7 @@ export default function AdminBook() {
                 <img
                   src={URL.createObjectURL(bookItem.image)}
                   alt="Book Cover"
-                  className="w-[30%] h-auto rounded-md mr-4"
+                  className="w-[20%] h-auto rounded-md mr-4"
                 />
               )}
               <div>

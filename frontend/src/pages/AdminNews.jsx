@@ -6,15 +6,14 @@ export default function AdminNews() {
   const [text, setText] = useState("");
   const [image, setImage] = useState(null);
   const [date, setDate] = useState("");
-  const [view, setView] = useState(0);
   const [newsList, setNewsList] = useState([]);
-  const [error, setError] = useState("");
+  const [titleError, setTitleError] = useState("");
+  const [textError, setTextError] = useState("");
+  const [imageError, setImageError] = useState("");
 
   useEffect(() => {
     const currentDate = new Date().toISOString().split("T")[0];
     setDate(currentDate);
-
-    setView((prevView) => prevView + 1);
   }, []);
 
   const handleImageUpload = (e) => {
@@ -23,28 +22,49 @@ export default function AdminNews() {
   };
 
   const addNews = () => {
-    if (!title || !text || !image) {
-      setError("Пожалуйста,загрузите фото,заполните загаловок и описание");
-      return;
+    let titleErrorText = "";
+    let textErrorText = "";
+    let imageErrorText = "";
+
+    if (!title) {
+      titleErrorText = "Пожалуйста, заполните заголовок";
     }
 
-    const newsItem = {
-      id: Date.now(),
-      title: title,
-      text: text,
-      image: image,
-      date: date,
-      view: view,
-    };
-    setNewsList([...newsList, newsItem]);
+    if (!text) {
+      textErrorText = "Пожалуйста, заполните описание";
+    }
 
-    setTitle("");
-    setText("");
-    setImage(null);
-    const currentDate = new Date().toISOString().split("T")[0];
-    setDate(currentDate);
-    setView(0);
-    setError("");
+    if (!image) {
+      imageErrorText = "Пожалуйста, загрузите изображение";
+    }
+
+    setTitleError(titleErrorText);
+    setTextError(textErrorText);
+    setImageError(imageErrorText);
+
+    if (title && text && image) {
+      const currentDate = new Date().toISOString().split("T")[0];
+      const newsItem = {
+        id: Date.now(),
+        title: title,
+        text: text,
+        image: image,
+        date: currentDate,
+      };
+
+      setNewsList([...newsList, newsItem]);
+
+      setTitle("");
+      setText("");
+      setImage(null);
+      setDate(currentDate);
+
+
+      
+      setTitleError("");
+      setTextError("");
+      setImageError("");
+    }
   };
 
   const deleteNews = (id) => {
@@ -56,7 +76,9 @@ export default function AdminNews() {
       <Sidebar />
       <div className="flex-1 p-0 flex flex-col items-start">
         <div className="bg-white p-6 rounded-lg w-full mb-4">
-          <h2 className="text-2xl font-semibold mb-4">НОВОСТИ</h2>
+          <h1 className="text-2xl font-semibold mb-4 font-Arimo text-blue-500">
+            НОВОСТИ
+          </h1>
           <form>
             <div className="mb-4">
               <label
@@ -71,8 +93,12 @@ export default function AdminNews() {
                 className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
                 placeholder="Введите заголовок"
                 value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                  setTitleError(""); // Reset error when changing title
+                }}
               />
+              {titleError && <p className="text-red-500">{titleError}</p>}
             </div>
             <div className="mb-4">
               <label
@@ -87,8 +113,12 @@ export default function AdminNews() {
                 placeholder="Введите описание"
                 rows="4"
                 value={text}
-                onChange={(e) => setText(e.target.value)}
+                onChange={(e) => {
+                  setText(e.target.value);
+                  setTextError(""); // Reset error when changing text
+                }}
               ></textarea>
+              {textError && <p className="text-red-500">{textError}</p>}
             </div>
             <div className="mb-4">
               <label
@@ -102,8 +132,12 @@ export default function AdminNews() {
                 id="image"
                 className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
                 accept="image/*"
-                onChange={handleImageUpload}
+                onChange={(e) => {
+                  handleImageUpload(e);
+                  setImageError(""); // Reset error when changing image
+                }}
               />
+              {imageError && <p className="text-red-500">{imageError}</p>}
             </div>
             <div className="mb-4">
               <label
@@ -127,8 +161,6 @@ export default function AdminNews() {
                 }}
               />
             </div>
-
-            {error && <p className="text-red-500 mb-4">{error}</p>}
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
@@ -138,7 +170,7 @@ export default function AdminNews() {
             </button>
           </form>
         </div>
-        <h1 className="text-2xl font-semibold pl-5">История Действий</h1>
+        <h3 className="text-xl font-semibold pl-6">История действий</h3>
         <div className="max-w-lg w-full">
           {newsList.map((newsItem) => (
             <div
@@ -149,7 +181,7 @@ export default function AdminNews() {
                 <img
                   src={URL.createObjectURL(newsItem.image)}
                   alt="News Image"
-                  className="w-[40%] h-auto rounded-md mr-4"
+                  className="w-[20%] h-auto rounded-md mr-4"
                 />
               )}
               <div>
