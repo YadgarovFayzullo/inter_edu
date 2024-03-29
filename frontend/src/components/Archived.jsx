@@ -12,7 +12,8 @@ export default function Archived() {
     "/IE&GS5.pdf",
   ];
   const pdfFiles_2024 = [
-    "IE&GS1-2024.pdf"
+    "IE&GS1-2024.pdf",
+    "IE&GS2-2024.pdf"
   ];
 
   return (

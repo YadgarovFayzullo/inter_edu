@@ -1,27 +1,32 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export default function Registration() {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log(
-      "Form submitted! Name:",
-      name,
-      "Email:",
-      email,
-      "Password:",
-      password
-    );
+    try {
+      const response = await axios.post("http://localhost:3000/auth/register", {
+        username: name,
+        password: password,
+      });
 
-    setName("");
-    setEmail("");
-    setPassword("");
+      console.log("User registered successfully:", response.data);
+
+      setName("");
+      setPassword("");
+    } catch (error) {
+      if (error.response && error.response.data) {
+        console.error("Error registering user:", error.response.data);
+      } else {
+        console.error("Error registering user:", error.message);
+      }
+    }
   };
-  
+
   return (
     <div className="flex flex-col items-center justify-center pt-24 md:min-h-screen py-2">
       <div className="bg-white md:shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
@@ -39,20 +44,6 @@ export default function Registration() {
               placeholder="Введите имя пользователя"
               value={name}
               onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
-              Email
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:bg-sky-100 focus:border-blue-700"
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Введите адрес электронной почты"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-6">
