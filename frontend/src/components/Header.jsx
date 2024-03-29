@@ -17,12 +17,14 @@ export default function Header() {
         ></video>
         <div className="w-[80%] h-screen text-black py-20 font-Header lg:px-24 lg:py-44">
           <div className="text-white mt-[22%] ml-7 lg:mt-1">
-            <span className="text-5xl lg:text-8xl">
-              INSPIRATION FOR <br />
-              THE <br />
-              MODERN <br />
-              RESEARCHER <br />
-            </span>
+            <h1>
+              <span className="text-5xl lg:text-8xl">
+                INSPIRATION FOR <br />
+                THE <br />
+                MODERN <br />
+                RESEARCHER <br />
+              </span>
+            </h1>
           </div>
         </div>
         {/* scroll down element */}
@@ -38,4 +40,4 @@ export default function Header() {
       </div>
     </div>
   );
-};
+}

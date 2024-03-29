@@ -6,79 +6,85 @@ import { FaFacebook } from "react-icons/fa";
 export default function Footer() {
   const { t } = useTranslation();
   return (
-    <section className="bg-slate-950">
-      <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-        <nav className="flex flex-wrap justify-center -mx-5 -my-2">
-          <div className="px-13 py-2">
-            <a
-              href="https://t.me/IEandGS"
-              className="text-base leading-6 text-gray-500 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
-            ></a>
+    <footer>
+      <div className="bg-slate-950 text-sm">
+        <div className="max-w-screen-lg px-4 sm:px-6 text-gray-300 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
+          <div className="p-5">
+            <h3 className="font-bold text-xl text-gray-500">IE&GS</h3>
           </div>
-          <div className="px-5 py-2">
+          <div className="p-5">
+            <div className="text-gray-500 inline-block text-2xl pb-4 mb-4 border-b-4 border-amber-500">
+              {t("redaction-footer")}
+            </div>
+            <a className="my-3 block">{t("loc-target")}</a>
+            <a className="my-3 block">{t("email-target")}</a>
+
+            <a className="my-3 block">{t("phone-target")}</a>
+          </div>
+          <div className="p-5">
+            <div className="inline-block text-2xl pb-4 mb-4 border-b-4 border-amber-500 text-gray-500">
+              {t("publisher-footer")}
+            </div>
+            <a className="my-3 block">{t("address-footer")}</a>
+          </div>
+          <div className="p-5">
+            <div className="inline-block text-2xl pb-4 mb-4 border-b-4 border-amber-500 text-gray-500">
+              {t("main-footer")}
+            </div>
+
+            <a className="my-3 block">{t("footer-inst")}</a>
+            <a className="my-3 block">{t("institute-address")}</a>
+            <a className="my-3 block">{t("footer-phone")}</a>
             <a
-              href="#"
-              className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
+              className="hover:text-amber-400"
+              target="blank"
+              href="https://buxdpi.uz"
             >
-              {t("about")}
+              buxdpi.uz
             </a>
           </div>
-          <div className="px-5 py-2">
-            <a
-              href="https://t.me/IEandGS"
-              className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
-            >
-              {t("price")}
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a
-              href="https://t.me/IEandGS"
-              className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
-            >
-              {t("contacts")}
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a
-              href="https://t.me/IEandGS"
-              className="text-base leading-6 text-gray-500  hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
-            >
-              {t("conditions")}
-            </a>
-          </div>
-        </nav>
-        <div className="flex justify-center mt-8 space-x-6 ml-[80px] md:ml-[310px] lg:ml-[320px] ">
-          <a
-            className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out left-36 "
-            href="https://t.me/IEandGS"
-          >
-            <BsTelegram size={25} />
-          </a>
-          <a
-            className="text-gray-400 hover:text-white transform hover:scale-80  transition-all duration-150 ease-in-out"
-            href=""
-          >
-            <FaInstagram size={25} />
-          </a>
-          <a
-            className="text-gray-400 hover:text-white transform hover:scale-80 transition-all duration-150 ease-in-out"
-            href=""
-          >
-            <FaFacebook size={25} />
-          </a>
-          <a
-            target="blank"
-            href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1"
-          >
-            <img
-              className="w-[50%] md:w-[20%] lg:w-[20%]"
-              src="cc-license.png"
-              alt="cc license"
-            />
-          </a>
         </div>
       </div>
-    </section>
+      <div className="bg-slate-950 pt-2">
+        <div className="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
+          <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+            <a
+              target="blank"
+              href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1"
+            >
+              <img
+                className="w-[30%] md:w-[20%] lg:w-[20%]"
+                src="cc-license.png"
+                alt="cc license"
+              />
+            </a>
+            <a
+              target="blank"
+              href="https://t.me/IEandGS"
+              className="w-6 mx-1 hover:text-gray-400"
+            >
+              <BsTelegram size={25} />
+            </a>
+            <a
+              target="blank"
+              href="https://instagram.com/intereduglobalstudy/"
+              className="w-6 mx-1 hover:text-gray-400"
+            >
+              <FaInstagram size={25} />
+            </a>
+            <a
+              target="blank"
+              href="https://t.me/IEandGS"
+              className="w-6 mx-1 hover:text-gray-400"
+            >
+              <FaFacebook size={25} />
+            </a>
+          </div>
+          <div className="my-5 text-gray-400">
+            © Copyright 2024. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }

@@ -30,7 +30,7 @@
   "doc-lang": "• maqola nomi, annotatsiya va kalit soʻzlar, oʻzbek, russ ва ingliz tilida boʻlishi lozim;",
   "doc-themes": "• maqolalar ilmiy jurnal yoʻnalishiga oid dolzarb mavzularda, ilmiy va tugallangan fikrlarga asoslangan, taklif va tavsiyalar bilan taqdim etilishi lozim;",
   "doc-format": "• maqola matnlari A4 hajmda, yuqoridan va pastdan 2,25 sm, chapdan 2.25 sm, oʻngdan 2.25 sm xoshiyaga ega boʻlishi kerak;",
-  "doc-style": "• maqola matni WORD matn muharririda, Arial Narrow shrifti, 12 oʻlchamida, 1 intervalda boʻlishi va 7-10 bet hajmda boʻlishi, mualliflar soni 4 nafardan oshmasligi lozim;",
+  "doc-style": "• maqola matni WORD matn muharririda, Arial Narrow shrifti, 12 oʻlchamida, 1 intervalda boʻlishi va 12-14 bet hajmda boʻlishi, mualliflar soni 4 nafardan oshmasligi lozim;",
   "doc-check": "• yuborilgan ilmiy maqolalar tahrir hay’ati tomonidan koʻrib chiqiladi;",
   "doc-originality": "• tahrirdan oʻtmagan, originalligi 70 foizdan kam bo’lgan va talablar boʻyicha taqdim etilmagan maqolalar nashr etilmaydi;",
   "doc-elect": "• maqolalar elektron shaklda qabul qilinadi;",
@@ -58,5 +58,20 @@
   "news": "Yangiliklar",
 
   "partners": "Hamkorlar",
-  "AR": "Kitobdagi 3D ob'ektlarni virtual haqiqat (VR) texnologiyasi asosida ko'rsatish imkoniyatini yaratuvchi mobil dastur."
+  "AR": "Kitobdagi 3D ob'ektlarni virtual haqiqat (VR) texnologiyasi asosida ko'rsatish imkoniyatini yaratuvchi mobil dastur.",
+  "3D": "Tasviy geometriyasi haqida ta'limiy 3D videolar",
+  "about-main": "Jurnal",
+  "connect": "Bog'lanish",
+  "manzil": "Manzil:",
+  "loc-target": "200100, Oʻzbekiston Respublikasi, Buxoro shahri Yangi yo'l  ko‘chasi, 51-uy,",
+  "email": "E-mail:",
+  "email-target": "nodirbekyadgarov@gmail.com",
+  "email-second": "pedagogicalperspective2023@gmail.com",
+  "phone": "Tel",
+  "phone-target":"+998(97) 300-34-00",
+
+  "address-footer": "Nashriyot: MCHJ «Buxoro determinanti» Manzil: 200100, Buxoro, Namozgox 24",
+  "institute-address": "Bukhara city, Piridastgir street, 2nd house",
+  "footer-phone": "0 (365) 226-10-97",
+  "footer-inst": "BuxDPI"
 }

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Partners from "./Partners"
 import SecondFooter from "./SecondFooter";
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import i18n from "i18next";
@@ -9,6 +8,7 @@ import { initReactI18next } from "react-i18next";
 import translationsEn from "./locale/en/translationEn.json";
 import translationsRu from "./locale/ru/translationsRu.json";
 import translationsUz from "./locale/uz/translationsUz.json";
+
 
 i18n.use(initReactI18next).init({
   resources: {

@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 export default function Colleagues() {
   const { t } = useTranslation();
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mr-2 ml-3">
       <div className="mt-24 pl-1 lg:ml-2">
         <h1>
           <strong>{t("main-red")}</strong> {t("name-red")}
           <br />
           <strong>{t("main-preds")}</strong>
-          {t("name-preds")}
+         {t("name-preds")}
         </h1>
         <div className="flex justify-center pt-5 pb-5">
           <div className="font-bold text-lg text-center lg:text-xl">

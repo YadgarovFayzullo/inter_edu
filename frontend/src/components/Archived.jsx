@@ -11,6 +11,10 @@ export default function Archived() {
     "/IE&GS4.pdf",
     "/IE&GS5.pdf",
   ];
+  const pdfFiles_2024 = [
+    "IE&GS1-2024.pdf",
+    "IE&GS2-2024.pdf"
+  ];
 
   return (
     <div>
@@ -21,7 +25,7 @@ export default function Archived() {
       </div>
       <div className="grid grid-row-col auto-cols-max gap-5 ml-7 mt-10 mb-96 lg:flex ">
         <div>
-          <h1 className="bg-[#ffba5a] rounded-md py-1 px-28 text-white ">
+          <h1 className="bg-blue-500 rounded-md py-1 px-28 text-white ">
             2023
           </h1>
           <ul className="ml-20 mt-4">
@@ -29,7 +33,7 @@ export default function Archived() {
               <li key={index}>
                 <a
                   target="blank"
-                  className="hover:text-[#ffaa34] transition-colors duration-300 text-xl font-mono"
+                  className="hover:text-blue-500 transition-colors duration-300 text-xl font-mono"
                   href={pdfFile}
                 >
                   {index + 1}-{t("num")}
@@ -39,9 +43,22 @@ export default function Archived() {
           </ul>
         </div>
         <div>
-          <h1 className="bg-[#ffba5a] rounded-md py-1 px-28 text-white ">
+          <h1 className="bg-blue-500 rounded-md py-1 px-28 text-white ">
             2024
           </h1>
+          <ul className="ml-20 mt-4">
+            {pdfFiles_2024.map((pdfFile, index) => (
+              <li key={index}>
+                <a
+                  target="blank"
+                  className="hover:text-blue-500 transition-colors duration-300 text-xl font-mono"
+                  href={pdfFile}
+                >
+                  {index + 1}-{t("num")}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
