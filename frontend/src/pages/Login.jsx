@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 export default function Registration() {
   const [name, setName] = useState("");
@@ -7,24 +6,6 @@ export default function Registration() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    try {
-      const response = await axios.post("http://localhost:3000/auth/register", {
-        username: name,
-        password: password,
-      });
-
-      console.log("User registered successfully:", response.data);
-
-      setName("");
-      setPassword("");
-    } catch (error) {
-      if (error.response && error.response.data) {
-        console.error("Error registering user:", error.response.data);
-      } else {
-        console.error("Error registering user:", error.message);
-      }
-    }
   };
 
   return (
