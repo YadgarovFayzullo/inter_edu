@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import { Helmet } from "react-helmet";
-
 export default function AdminNews() {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [image, setImage] = useState(null);
   const [date, setDate] = useState("");
   const [newsList, setNewsList] = useState([]);
+  const [selectedFile, setSelectedFile] = useState(null);
   const [titleError, setTitleError] = useState("");
   const [textError, setTextError] = useState("");
   const [imageError, setImageError] = useState("");
+  const [fileError, setFileError] = useState("");
 
+  //Date
   useEffect(() => {
     const currentDate = new Date().toISOString().split("T")[0];
     setDate(currentDate);
@@ -22,10 +24,17 @@ export default function AdminNews() {
     setImage(file);
   };
 
+  const handleFileUpload = (event) => {
+    setSelectedFile(event.target.files[0]);
+
+    setFileError("");
+  };
+
   const addNews = () => {
     let titleErrorText = "";
     let textErrorText = "";
     let imageErrorText = "";
+    let fileErrorText = "";
 
     if (!title) {
       titleErrorText = "Пожалуйста, заполните заголовок";
@@ -38,17 +47,22 @@ export default function AdminNews() {
     if (!image) {
       imageErrorText = "Пожалуйста, загрузите изображение";
     }
+    if (!file) {
+      fileErrorText = "Пожалуйста, загрузите файл";
+    }
 
     setTitleError(titleErrorText);
     setTextError(textErrorText);
     setImageError(imageErrorText);
+    setFileError(fileErrorText);
 
-    if (title && text && image) {
+    if (title && text && image && file) {
       const currentDate = new Date().toISOString().split("T")[0];
       const newsItem = {
         id: Date.now(),
         title: title,
         text: text,
+        file: selectedFile,
         image: image,
         date: currentDate,
       };
@@ -58,10 +72,12 @@ export default function AdminNews() {
       setTitle("");
       setText("");
       setImage(null);
+      setFileError(null);
       setDate(currentDate);
 
       setTitleError("");
       setTextError("");
+      setFileError("");
       setImageError("");
     }
   };
@@ -73,13 +89,16 @@ export default function AdminNews() {
   return (
     <div className="flex h-screen md:pl-64">
       <Helmet>
-        <title>Новости</title>
+        <title>Подробнее</title>
       </Helmet>
       <Sidebar />
       <div className="flex-1 p-0 flex flex-col items-start">
         <div className="bg-white p-6 rounded-lg w-full mb-4">
           <h1 className="text-2xl font-semibold mb-4 font-Arimo text-blue-500">
-            НОВОСТИ
+            ПОДРОБНЕЕ
+          </h1>
+          <h1 className="text-[#0000008A] head2 mt-5 mb-5">
+            Добавить описание
           </h1>
           <form>
             <div className="mb-4">
@@ -143,6 +162,25 @@ export default function AdminNews() {
             </div>
             <div className="mb-4">
               <label
+                htmlFor="image"
+                className="block text-gray-700 font-bold mb-2"
+              >
+                Загрузить PDF файл
+              </label>
+              <input
+                type="file"
+                id="image"
+                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                accept=".pdf"
+                onChange={(e) => {
+                  handleFileUpload(e);
+                  setFileError("");
+                }}
+              />
+              {imageError && <p className="text-red-500">{fileError}</p>}
+            </div>
+            <div className="mb-4">
+              <label
                 htmlFor="date"
                 className="block text-gray-700 font-bold mb-2"
               >
@@ -163,16 +201,100 @@ export default function AdminNews() {
                 }}
               />
             </div>
+            <main>
+              <h1 className="text-[#0000008A] head2 mt-5 mb-5">
+                Добавить авторов
+              </h1>
+              <div className="mb-4">
+                <label
+                  htmlFor="title"
+                  className="block text-gray-700 font-bold mb-2"
+                >
+                  Заголовок
+                </label>
+                <input
+                  type="text"
+                  id="title"
+                  className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                  placeholder="Введите заголовок"
+                  value={title}
+                  onChange={(e) => {
+                    setTitle(e.target.value);
+                    setTitleError("");
+                  }}
+                />
+                {titleError && <p className="text-red-500">{titleError}</p>}
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="text"
+                  className="block text-gray-700 font-bold mb-2"
+                >
+                  Описание
+                </label>
+                <textarea
+                  id="text"
+                  className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                  placeholder="Введите описание"
+                  rows="4"
+                  value={text}
+                  onChange={(e) => {
+                    setText(e.target.value);
+                    setTextError("");
+                  }}
+                ></textarea>
+                {textError && <p className="text-red-500">{textError}</p>}
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="subtitle"
+                  className="block text-gray-700 font-bold mb-2"
+                >
+                  Страницы
+                </label>
+                <textarea
+                  id="text"
+                  className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                  placeholder="Введите страницы (1-10)"
+                  rows="4"
+                  value={text}
+                  onChange={(e) => {
+                    setText(e.target.value);
+                    setTextError("");
+                  }}
+                ></textarea>
+                {textError && <p className="text-red-500">{textError}</p>}
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="image"
+                  className="block text-gray-700 font-bold mb-2"
+                >
+                  Загрузить PDF файл
+                </label>
+                <input
+                  type="file"
+                  id="image"
+                  className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                  accept=".pdf"
+                  onChange={(e) => {
+                    handleFileUpload(e);
+                    setFileError("");
+                  }}
+                />
+                {imageError && <p className="text-red-500">{fileError}</p>}
+              </div>
+            </main>
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
               onClick={addNews}
             >
-              Добавить новость
+              Добавить информацию
             </button>
           </form>
         </div>
-        <h3 className="text-xl font-semibold pl-6">История действий</h3>
+        <h3 className="text-xl font-semibold pl-6 pb-11">История действий</h3>
         <div className="max-w-lg w-full">
           {newsList.map((newsItem) => (
             <div

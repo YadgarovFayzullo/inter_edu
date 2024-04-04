@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-
+import { Link } from "react-router-dom";
 export default function Archived() {
   const { t } = useTranslation();
 
@@ -12,8 +12,8 @@ export default function Archived() {
     "/IE&GS5.pdf",
   ];
   const pdfFiles_2024 = [
-    "IE&GS1-2024.pdf",
-    "IE&GS2-2024.pdf"
+    "IE&GS1-2024.pdf", 
+    "IE&GS2-2024.pdf", 
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function Archived() {
           {t("archived")}
         </h1>
       </div>
-      <div className="grid grid-row-col auto-cols-max gap-5 ml-7 mt-10 mb-96 lg:flex ">
+      <div className="grid grid-row-col auto-cols-max gap-5 justify-center mt-10 mb-96 md:flex md:flex-wrap">
         <div>
           <h1 className="bg-blue-500 rounded-md py-1 px-28 text-white ">
             2023
@@ -49,13 +49,15 @@ export default function Archived() {
           <ul className="ml-20 mt-4">
             {pdfFiles_2024.map((pdfFile, index) => (
               <li key={index}>
-                <a
-                  target="blank"
-                  className="hover:text-blue-500 transition-colors duration-300 text-xl font-mono"
-                  href={pdfFile}
-                >
-                  {index + 1}-{t("num")}
-                </a>
+                <Link to={"/Doc"}>
+                  <a
+                    target="blank"
+                    className="hover:text-blue-500 transition-colors duration-300 text-xl font-mono"
+                    href={pdfFile}
+                  >
+                    {index + 1}-{t("num")}
+                  </a>
+                </Link>
               </li>
             ))}
           </ul>

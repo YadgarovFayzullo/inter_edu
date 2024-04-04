@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Kanit:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Kanit:wght@300;400&family=Oswald&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -65,4 +64,45 @@
     transform: translateY(15px);
     opacity: 0;
   }
+}
+
+.head1 {
+  display: flex;
+  flex-direction: row;
+  margin-right: 12px;
+}
+.head1:before,
+.head1:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #ddd;
+  margin: auto;
+}
+.head1:before {
+  margin-right: 10px;
+}
+.head1:after {
+  margin-left: 10px;
+}
+.head2 {
+  display: flex;
+  flex-direction: row;
+  margin-right: 12px;
+}
+.head2:before,
+.head2:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #ddd;
+  margin: auto;
+}
+.head2:before {
+  margin-right: 10px;
+}
+.head2:after {
+  margin-left: 10px;
+}
+
+::spelling-error {
+  background: yellow;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
-
+import { Helmet } from "react-helmet";
 export default function AdminBook() {
   const [image, setImage] = useState(null);
   const [error, setError] = useState("");
@@ -36,6 +36,9 @@ export default function AdminBook() {
 
   return (
     <div className="flex h-screen md:pl-64">
+       <Helmet>
+        <title>Обложка</title>
+      </Helmet>
       <Sidebar />
       <div className="flex-1 p-0 flex flex-col items-start">
         <div className="bg-white p-6 rounded-lg w-full mb-4">

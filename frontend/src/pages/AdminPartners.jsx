@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
-
+import { Helmet } from "react-helmet";
 export default function AdminPartners() {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
@@ -53,7 +53,6 @@ export default function AdminPartners() {
       setImage(null);
       setDate(new Date().toISOString().split("T")[0]);
 
-      // Reset errors
       setTitleError("");
       setTextError("");
       setImageError("");
@@ -66,6 +65,9 @@ export default function AdminPartners() {
 
   return (
     <div className="flex h-screen md:pl-64">
+      <Helmet>
+        <title>Партнеры</title>
+      </Helmet>
       <Sidebar />
       <div className="flex-1 p-0 flex flex-col items-start">
         <div className="bg-white p-6 rounded-lg w-full mb-4">
@@ -88,7 +90,7 @@ export default function AdminPartners() {
                 value={title}
                 onChange={(e) => {
                   setTitle(e.target.value);
-                  setTitleError(""); // Reset error when changing title
+                  setTitleError(""); 
                 }}
               />
               {titleError && <p className="text-red-500">{titleError}</p>}
@@ -108,7 +110,7 @@ export default function AdminPartners() {
                 value={text}
                 onChange={(e) => {
                   setText(e.target.value);
-                  setTextError(""); // Reset error when changing text
+                  setTextError(""); 
                 }}
               ></textarea>
               {textError && <p className="text-red-500">{textError}</p>}
@@ -127,7 +129,7 @@ export default function AdminPartners() {
                 accept="image/*"
                 onChange={(e) => {
                   handleImageUpload(e);
-                  setImageError(""); // Reset error when changing image
+                  setImageError(""); 
                 }}
               />
               {imageError && <p className="text-red-500">{imageError}</p>}

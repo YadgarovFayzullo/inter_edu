@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
+import { Helmet } from "react-helmet";
 
 export default function AdminArchive() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -20,7 +21,7 @@ export default function AdminArchive() {
     setYearError("");
   };
 
-  const addArchive = () => {
+  const addArchive = async () => {
     let yearErrorText = "";
     let fileErrorText = "";
 
@@ -36,23 +37,43 @@ export default function AdminArchive() {
     setFileError(fileErrorText);
 
     if (selectedYear && selectedFile) {
-      const adminItem = {
-        year: selectedYear,
-        name: selectedFile.name, // Change image to name
-      };
+      try {
+        const formData = new FormData();
+        formData.append("year", selectedYear);
+        formData.append("file", selectedFile);
 
-      setNewsList([...newsList, adminItem]);
+        const response = await axios.post(
+          "http://127.0.0.1:3000/archive",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
 
-      setSelectedYear("");
-      setSelectedFile(null);
+        console.log("Archive added successfully:", response.data);
 
-      setYearError("");
-      setFileError("");
+        const adminItem = {
+          year: selectedYear,
+          name: selectedFile.name,
+        };
+
+        setNewsList([...newsList, adminItem]);
+        setSelectedYear("");
+        setSelectedFile(null);
+        setYearError("");
+        setFileError("");
+      } catch (error) {
+        console.error("Error adding archive:", error);
+      }
     }
   };
-
   return (
     <div className="flex h-screen md:pl-64">
+      <Helmet>
+        <title>Архив</title>
+      </Helmet>
       <Sidebar />
       <div className="flex-1 p-0 flex flex-col items-start ">
         <div className="bg-white p-6 rounded-lg w-full mb-8 flex flex-col">
@@ -80,12 +101,14 @@ export default function AdminArchive() {
           {selectedFile && (
             <p className="mb-4">Выбранный файл: {selectedFile.name}</p>
           )}
-          {fileError && <p className="text-red-500">{fileError}</p>}
+          {fileError && <p className="text-red-500">{fileError}
+          </p>
+          }
           <button
             onClick={addArchive}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-44 h-9 rounded focus:outline-none focus:shadow-outline"
           >
-            Отправить
+            Добавить материал
           </button>
           <h3 className="text-xl font-semibold pt-5">История действий</h3>
           <div>

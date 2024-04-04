@@ -7,7 +7,6 @@ import { FaBookReader } from "react-icons/fa";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import Login from "../pages/Login"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

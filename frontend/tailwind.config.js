@@ -14,7 +14,10 @@ export default {
     fontFamily: {
       Header: ["Oswald", "sans-serif"],
       Arimo: ["Arimo", "serif"],
+      Sans: ["Noto Sans", "sans-serif"],
+      Roboto: ["Roboto Slab", 'serif']
     },
+    
   },
   plugins: [],
 };

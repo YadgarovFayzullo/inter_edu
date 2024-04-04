@@ -14,7 +14,8 @@ import AdminNews from "../pages/AdminNews";
 import AdminBook from "../pages/AdminBook";
 import AdminPartners from "../pages/AdminPartners";
 import AdminArchive from "../pages/AdminArchive";
-
+import Doc from "../pages/Doc";
+import AdminDoc from "../pages/AdminDoc";
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/archive" element={<Archive />} />
           <Route path="/officials" element={<Officials />} />
+          <Route path="/doc" element={<Doc />} />
           <Route
             path="/login"
             element={<Login setAdminStatus={setAdminStatus} />}
@@ -44,6 +46,7 @@ function App() {
           <Route path="/adminBook" element={<AdminBook />} />
           <Route path="/adminPartners" element={<AdminPartners />} />
           <Route path="/adminArchive" element={<AdminArchive />} />
+          <Route path="/adminDoc" element={<AdminDoc />} />
         </Routes>
       </Router>
     </div>

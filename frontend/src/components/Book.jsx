@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Book() {
   const { t } = useTranslation();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000); 
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="mt-5 lg:mt-10 overflow-hidden flex flex-col lg:flex-row items-center">
+        <div className="lg:w-1/3 lg:ml-24 xl:ml-[100px] flex items-center justify-around">
+          <div className="skeleton w-[70%] md:w-4/6 lg:w-full xl:w-2/3"></div>
+        </div>
+        <div className="w-ful mt-5 lg:w-2/3 xl:w-1/2 md:mt-0 lg:mt-0 lg:ml-20 lg:mr-6">
+          <div className="skeleton-line h-5 mb-4"></div>
+          <div className="skeleton-line h-5 mb-4"></div>
+          <div className="skeleton-line h-5 mb-4"></div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="mt-5 lg:mt-10 overflow-hidden flex flex-col lg:flex-row items-center">
       <div className="lg:w-1/3 lg:ml-24 xl:ml-[100px] flex items-center justify-around">
