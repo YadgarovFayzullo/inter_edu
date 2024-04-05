@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
@@ -9,27 +8,7 @@ export default function Registration() {
   const [loggedIn, setLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const response = await axios.post("http://localhost:3000/auth/login", {
-        username: name,
-        password: password,
-      });
-      console.log("Registered successfully", response.data);
-
-      navigate("/admin");
-      setName("");
-      setPassword("");
-    } catch (error) {
-      if (error.response && error.response.data) {
-        console.log("Error registering", error.response.data);
-      } else {
-        console.log("Error", error.message);
-      }
-    }
-  };
+ 
   return loggedIn ? null : (
     <div className="flex flex-col items-center justify-center pt-24 md:min-h-screen py-2">
       <Helmet>
