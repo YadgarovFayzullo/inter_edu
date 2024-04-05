@@ -11,10 +11,7 @@ export default function Archived() {
     "/IE&GS4.pdf",
     "/IE&GS5.pdf",
   ];
-  const pdfFiles_2024 = [
-    "IE&GS1-2024.pdf", 
-    "IE&GS2-2024.pdf", 
-  ];
+  const pdfFiles_2024 = ["IE&GS1-2024.pdf", "IE&GS2-2024.pdf"];
 
   return (
     <div>
@@ -49,15 +46,13 @@ export default function Archived() {
           <ul className="ml-20 mt-4">
             {pdfFiles_2024.map((pdfFile, index) => (
               <li key={index}>
-                <Link to={"/Doc"}>
-                  <a
-                    target="blank"
-                    className="hover:text-blue-500 transition-colors duration-300 text-xl font-mono"
-                    href={pdfFile}
-                  >
-                    {index + 1}-{t("num")}
-                  </a>
-                </Link>
+                <a
+                  target="blank"
+                  className="hover:text-blue-500 transition-colors duration-300 text-xl font-mono"
+                  href={pdfFile}
+                >
+                  {index + 1}-{t("num")}
+                </a>
               </li>
             ))}
           </ul>
