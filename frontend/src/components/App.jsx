@@ -46,7 +46,7 @@ function App() {
           <Route path="/officials" element={<Officials />} />
           <Route path="/doc" element={<Doc />} />
           <Route path="/edition" element={<Editions />} />
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route
             path="/admin"
             element={isAuthenticated ? <Admin /> : <Navigate to="/login" />}
