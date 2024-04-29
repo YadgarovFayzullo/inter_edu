@@ -30,7 +30,7 @@ export default function Navbar({ changeLang }) {
   let [open, setOpen] = useState(false);
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0">
+    <div className="shadow-md w-full fixed top-0 left-0 font-Montserrat">
       <div className="md:flex items-end justify-between bg-white py-4 md:px-10 px-7">
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
           <FaBookReader className="w-7 h-7 text-blue-600" />
@@ -60,7 +60,7 @@ export default function Navbar({ changeLang }) {
             </a>
           </div>
           {links.map((link, index) => (
-            <li key={index} className="md:ml-8 md:my-0 my-7 font-semibold">
+            <li key={index} className="md:ml-8 md:my-0 my-7 font-medium">
               <Link
                 to={link.link}
                 className="text-gray-800 hover:text-blue-500 duration-200"
@@ -74,16 +74,16 @@ export default function Navbar({ changeLang }) {
           </Link>
           <select
             id="countries"
-            className="bg-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 lg:ml-3 font-Arimo"
+            className="bg-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 lg:ml-3 font-Montserrat"
             onChange={changeLanguageHandler}
           >
             <option value="ru">Русский</option>
             <option value="uz">O'zbek</option>
             <option value="en">English</option>
           </select>
-          {/* <Link className="md:block hidden btn2" to={'/login'}>
+          <Link className="md:block hidden btn2" to={'/login'}>
           <button className="flex md:ml-3 border px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded focus:outline-none focus:shadow-outline">Войти</button>
-          </Link> */}
+          </Link>
         </ul>
       </div>
     </div>

@@ -102,19 +102,19 @@ export const pdfFiles = [
 export default function EachDoc() {
   return (
     <section className="md:flex md:justify-center md:mt-28 md:mr-48 mt-20">
-      <div className="border-r border-l">
+      <div className="border-r border-l font-Montserrat">
         <div className=" border-gray-400 md:ml-2">
-          <h2 className="font-semibold font-Sans text-gray-800 ml-3 mb-3 md:ml-0 md:mb-0">
+          <h2 className="font-semibold text-gray-800 ml-3 mb-3 md:ml-0 md:mb-0">
             Current Issue
           </h2>
-          <h4 className="font-semibold text-base md:mt-5 font-Sans text-gray-800 ml-3 md:ml-0">
+          <h4 className="font-semibold text-base md:mt-5 text-gray-800 ml-3 md:ml-0">
             Vol. 3 No. 3 (2024): Educational Research in Universal Sciences
           </h4>
           <div className="md:flex md:justify-between md:items-center md:w-full md:max-w-4xl md:px-4 md:gap-5">
             <div className="md:w-full flex items-center justify-center">
-              <img className="md:w-[80%] w-[70%]" src="Book8.png" alt="" />
+              <img className="shadow md:w-[80%] w-[70%]" src="Book8.png" alt="" />
             </div>
-            <div className="flex-grow font-Sans ml-3 mr-3 mt-5">
+            <div className="flex-grow ml-3 mr-3 mt-5">
               <p className="">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
                 assumenda et aliquid minus? Minima doloremque numquam
@@ -131,7 +131,7 @@ export default function EachDoc() {
                 <span> 12.12.2024</span>
               </p>
               <div className="pt-4">
-                <button className="rounded-sm border border-[#006798] hover:bg-[#006798] hover:text-white py-0.5 px-5">
+                <button className="rounded-sm border border-blue-500 hover:bg-blue-500 hover:text-white py-0.5 px-5">
                   <PiFilePdfThin size={25} />
                 </button>
               </div>
@@ -139,7 +139,7 @@ export default function EachDoc() {
           </div>
           <div>
             <div>
-              <h1 className="text-[#0000008A] font-Sans pt-16 mb-16 head1 ">
+              <h1 className="text-[#0000008A] pt-16 mb-16 head1 ">
                 Articles
               </h1>
             </div>
@@ -148,13 +148,13 @@ export default function EachDoc() {
                 <div key={index}>
                   <ul>
                     <li className="ml">
-                      <p className="text-[#006798] font-semibold font-Arimo">
+                      <p className="text-blue-700 font-semibold">
                         {pdf.name}
                       </p>
                       <h5 className="text-sm mb-4">{pdf.authors}</h5>
                       <div className="flex gap-3">
                         <a
-                          className="rounded-sm border border-[#006798] hover:bg-[#006798] hover:text-white py-0.5 px-5 flex items-center"
+                          className="rounded-sm border border-blue-500 hover:bg-blue-500 hover:text-white py-0.5 px-5 flex items-center"
                           href={pdf.link}
                           target="_blank"
                         >

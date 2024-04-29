@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 export default function About() {
   const { t } = useTranslation();
   return (
-    <div>
+    <div className="font-Montserrat">
       <h1 className="mt-[80px] ml-6 mb-5 sm:pt-10 mr-10">
-        <strong>{t("who")}</strong>
+        <span className="font-medium">{t("who")}</span>
         {t("location")}
         <br />
         {t("register")}
@@ -14,7 +14,7 @@ export default function About() {
         {t("VAC")}{" "}
         <a
           target="blank"
-          className="underline decoration-sky-500  hover:decoration-blue-600"
+          className="text-sky-400 hover:text-sky-600"
           href="https://oak.uz/pages/4802"
         >
           https://oak.uz/pages/4802
@@ -22,19 +22,19 @@ export default function About() {
         <br />
         {t("created")}
       </h1>
-      <div className="py-12 flex flex-col items-center justify-center">
-        <div className="text-sm  sm:text-xl lg:text-xl text-center text-white mb-1 bg-[#5d9cec] px-12 sm:px-14 md:px-20 lg:px-[70px]">
+      <div className="py-12 flex flex-col items-center">
+        <div className="text-sm sm:text-xl lg:text-xl text-center text-white mb-1 bg-[#5d9cec] px-14 sm:px-22 md:px-22 lg:px-[64px]">
           {t("license")}
         </div>
         <a
           href="./guvohnoma.pdf"
           target="_blank"
-          className="flex items-center justify-center"
+          alt="license"
         >
           <img
-            className="w-[45%] sm:w-[35%] md:w-[40%] lg:w-[40%] max-w-[600px] mb-12 lg:shadow-xl lg:hover:shadow-2xl lg:duration-200 mx-auto"
+            className=" mx-auto w-[45%] sm:w-[35%] md:w-[40%] lg:w-[40%] max-w-[600px] mb-12 lg:shadow-xl lg:hover:shadow-2xl lg:duration-200 "
             src="./guvohnomaa.jpg"
-            alt=""
+            alt="license"
           />
         </a>
       </div>

@@ -45,9 +45,9 @@ export default function News() {
   const currentItems = newsItems.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    <section className="py-10 mb-5 flex flex-col justify-around">
+    <section className="py-10 mb-5 flex flex-col justify-around font-Montserrat">
       <div className="text-center">
-        <h1 className="text-[40px] font-medium">{t("news")}</h1>
+        <h1 className="text-[40px]">{t("news")}</h1>
       </div>
       <body className="flex justify-around">
         <div className="flex flex-row gap-10 md:gap-28 md:justify-around flex-wrap mt-12 max-w-[70%] md:max-w-full">
@@ -63,21 +63,20 @@ export default function News() {
                 alt="image"
               />
               <div className="flex flex-col justify-between p-2 leading-normal">
-                <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                <h2 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900">
                   {item.title}
                 </h2>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                   {item.description}
                 </p>
-
-                <div className="flex gap-12">
+                {/* <div className="flex gap-12">
                   <p>
                     <FaRegEye />
                   </p>
                   <p>
                     <CiCalendar />
                   </p>
-                </div>
+                </div> */}
               </div>
             </a>
           ))}

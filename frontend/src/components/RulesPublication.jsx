@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 export default function RulesPublication() {
   const { t } = useTranslation();
   return (
-    <div>
+    <div className="font-Montserrat">
       <div className="mt-28 mb-5 ml-7 mr-4 sm:mb-6">
-        <h1 className="mb-2 font-bold md:mb-2 flex justify-center">
+        <h1 className="mb-2 font-medium md:mb-2 flex justify-center">
           {t("info-journal")}
         </h1>
         <h1>{t("journal-text")}</h1>
-        <h1 className="font-bold text-lg flex justify-center mt-4 mb-2 md:mt-7 md:mb-2 lg:mt-5 lg:mb-5">
+        <h1 className="text-lg font-medium flex justify-center mt-4 mb-2 md:mt-7 md:mb-2 lg:mt-5 lg:mb-5">
           {t("rules-doc")}
         </h1>
         <ul>
@@ -20,7 +20,6 @@ export default function RulesPublication() {
           <li>{t("doc-format")}</li>
           <li>{t("doc-style")}</li>
           <li>{t("doc-check")}</li>
-          <li>{t("doc-license")}</li>
           <li>{t("doc-originality")}</li>
           <li>{t("doc-elect")}</li>
           <li>{t("doc-date")}</li>
@@ -29,7 +28,7 @@ export default function RulesPublication() {
           <li>
             {t("doc-site")}
             <a
-              className="font-bold ml"
+              className="font-medium ml-1 text-sky-800 hover:text-sky-500"
               href="https://intereduglobalstudy.com"
             >
               intereduglobalstudy.com
@@ -37,9 +36,9 @@ export default function RulesPublication() {
           </li>
           <li>{t("doc-variant")}</li>
           <li>
-            {t("doc-delete")}
+            {t("doc-delete")}:
             <a
-              className="font-bold flex"
+              className="font-medium md:ml-1 text-sky-800 hover:text-sky-500"
               href="https://intereduglobalstudy.com"
             >
               intereduglobalstudy.com
@@ -49,7 +48,7 @@ export default function RulesPublication() {
         </ul>
       </div>
       <div className="bg-[#f2f4fb] py-12 flex flex-col items-center justify-center">
-        <div className="text-sm  sm:text-xl lg:text-xl text-center text-white mb-1 bg-[#5d9cec] px-7 sm:px-14 md:px-13 lg:px-6">
+        <div className="text-sm sm:text-xl lg:text-xl text-center text-white mb-1 bg-[#5d9cec] px-5 sm:px-14 md:px-10 lg:px-2.5">
           {t("public-rules")}
         </div>
         <a href="./maqola-talablari.pdf" target="_blank">
