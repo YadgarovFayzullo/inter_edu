@@ -48,7 +48,6 @@ export default function Archived() {
             {pdfFiles_2024.map((pdfFile, index) => (
               <li key={index}>
                 <a
-                  target="blank"
                   className="hover:text-blue-500 transition-colors duration-300 text-xl font-mono"
                   href={pdfFile}
                 >
