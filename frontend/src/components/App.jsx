@@ -13,14 +13,14 @@ import Archive from "../pages/Archive";
 import AboutUs from "../pages/AboutUs";
 import Partnership from "../pages/Partnership";
 import Officials from "./Officials";
-import Login from "../pages/Login";
 import Admin from "../pages/Admin";
-import AdminNews from "../pages/AdminNews";
-import AdminBook from "../pages/AdminBook";
-import AdminPartners from "../pages/AdminPartners";
-import AdminArchive from "../pages/AdminArchive";
+// import Login from "../pages/Login";
+// import AdminNews from "../pages/AdminNews";
+// import AdminBook from "../pages/AdminBook";
+// import AdminPartners from "../pages/AdminPartners";
+// import AdminArchive from "../pages/AdminArchive";
+// import AdminDoc from "../pages/AdminDoc";
 import Doc from "../pages/Doc";
-import AdminDoc from "../pages/AdminDoc";
 import useAuth from "../hooks/useAuth";
 import Editions from "./Editions";
 
@@ -52,7 +52,7 @@ function App() {
             element={isAuthenticated ? <Admin /> : <Navigate to="/login" />}
           />
           {/* admin pages */}
-          <Route
+          {/* <Route
             path="/adminNews"
             element={isAuthenticated ? <AdminNews /> : <Navigate to="/login" />}
           />
@@ -75,7 +75,7 @@ function App() {
           <Route
             path="/adminDoc"
             element={isAuthenticated ? <AdminDoc /> : <Navigate to="/login" />}
-          />
+          /> */}
         </Routes>
       </Router>
     </div>
