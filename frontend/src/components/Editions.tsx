@@ -10,7 +10,7 @@ const Editions: React.FC = () => {
     <section className="mt-24">
       <div className="grid grid-row-col auto-cols-max items-center justify-center md:justify-normal md:items-baseline md:ml-7 gap-5 mt-10 mb-96 md:flex">
         <div>
-          <h1 className="bg-blue-500 rounded-md py-1 px-28 text-white">
+          <h1 className="bg-[#f0582f] rounded-md py-1 px-28 text-white">
             Выпуск
           </h1>
           <ul className="ml-20 mt-4">
@@ -19,7 +19,7 @@ const Editions: React.FC = () => {
                 <a
                   href={pdfFile}
                   target="_blank"
-                  className="hover:text-blue-500 transition-color text-xl"
+                  className="hover:text-[#f0582f] transition-color text-xl"
                 >
                   {index + 1}-{t("issue")}
                 </a>

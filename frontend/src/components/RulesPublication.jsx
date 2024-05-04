@@ -28,7 +28,7 @@ export default function RulesPublication() {
           <li>
             {t("doc-site")}
             <a
-              className="font-medium ml-1 text-sky-800 hover:text-sky-500"
+              className="font-medium ml-1 text-[#f0582f] hover:underline"
               href="https://intereduglobalstudy.com"
             >
               intereduglobalstudy.com
@@ -38,7 +38,7 @@ export default function RulesPublication() {
           <li>
             {t("doc-delete")}:
             <a
-              className="font-medium md:ml-1 text-sky-800 hover:text-sky-500"
+              className="font-medium md:ml-1 text-[#f0582f] hover:underline"
               href="https://intereduglobalstudy.com"
             >
               intereduglobalstudy.com

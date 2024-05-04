@@ -89,9 +89,9 @@ export default function News() {
               key={index}
               className={`mx-2 px-4 py-2 border border-gray-200 rounded-full ${
                 currentPage === index + 1
-                  ? "bg-blue-500 text-white"
-                  : "bg-white text-blue-500"
-              } transition-colors duration-300 hover:bg-blue-500 hover:text-white`}
+                  ? "bg-[#f0582f] text-white"
+                  : "bg-white text-[#f0582f]"
+              } transition-colors duration-300 hover:bg-[#f0582f] hover:text-white`}
               onClick={() => handleClick(index + 1)}
             >
               {index + 1}

@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 export default function Partners() {
   const { t } = useTranslation();
   return (
-    <div className="mb-24 mt-24">
+    <div className="mb-24 mt-24 font-Montserrat">
       <div className="mb-24 text-center">
-        <h1 className="text-4xl font-bold">{t("partners")}</h1>
+        <h1 className="text-4xl">{t("partners")}</h1>
       </div>
       <div className="flex justify-around flex-wrap gap-4">
         <div className=""> 

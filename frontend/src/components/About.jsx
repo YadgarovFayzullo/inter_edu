@@ -14,7 +14,7 @@ export default function About() {
         {t("VAC")}{" "}
         <a
           target="blank"
-          className="text-sky-400 hover:text-sky-600"
+          className="text-[#f0582f] hover:underline"
           href="https://oak.uz/pages/4802"
         >
           https://oak.uz/pages/4802

@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -105,4 +104,22 @@
 
 ::spelling-error {
   background: yellow;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #f0582f !important;
+}
+
+::selection {
+  background-color: rgb(255 186 90);
+  color: #f0582f;
+}
+
+.slick-dots li button:before {
+  color: #ff0000;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff0000;
 }
