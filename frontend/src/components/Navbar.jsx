@@ -3,7 +3,7 @@ import {
   Bars3BottomRightIcon,
   XMarkIcon,
 } from "@heroicons/react/24/solid";
-import { FaBookReader } from "react-icons/fa";
+import { FaBookOpen } from "react-icons/fa";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -30,10 +30,10 @@ export default function Navbar({ changeLang }) {
   let [open, setOpen] = useState(false);
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0 font-Montserrat z-50"> {/* Adjusted z-index */}
+    <div className="shadow-md w-full fixed top-0 left-0 font-Montserrat z-50"> 
       <div className="md:flex items-end justify-between bg-white py-4 md:px-10 px-7">
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-          <FaBookReader className="w-7 h-7 text-blue-600" />
+          <FaBookOpen className="w-7 h-7 text-red-500"/>
           <Link to={"/"}>
             <h1>
               <span>IE&GS</span>
@@ -70,11 +70,11 @@ export default function Navbar({ changeLang }) {
             </li>
           ))}
           <Link className="sm:block md:hidden btn1" to={'/login'}>
-            <button className="flex md:ml-3 border px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded focus:outline-none focus:shadow-outline">Войти</button>
+            <button className="flex -mt-3 -ml-3 px-3 py-1 text-[#f0582f] hover:text-[#fe9375] font-semibold rounded focus:outline-none focus:shadow-outline">Войти</button>
           </Link>
           <select
             id="countries"
-            className="bg-white text-gray-900 text-sm rounded-lg focus:ring-[#f0582f] focus:border-blue-500 p-2 lg:ml-3 font-Montserrat"
+            className="bg-white mt-2 md:mt-0 text-gray-900 text-sm rounded-lg focus:ring-[#f0582f] focus:border-blue-500 p-2 lg:ml-3 font-Montserrat -ml-3"
             onChange={changeLanguageHandler}
           >
             <option value="ru">Русский</option>
