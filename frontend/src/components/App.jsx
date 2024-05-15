@@ -75,8 +75,8 @@ function App() {
           <Route
             path="/adminDoc"
             element={isAuthenticated ? <AdminDoc /> : <Navigate to="/login" />}
-          />
-        </Routes> */}
+          /> */}
+        </Routes>
       </Router>
     </div>
   );
