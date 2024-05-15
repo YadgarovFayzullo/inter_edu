@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Layout from "./Layout";
 
-const Editions: React.FC = () => {
+const Editions = () => {
   const pdfFiles = ["IE&GS-2024-3(1).pdf", "IE&GS-2024-3(2).pdf"];
 
   const { t } = useTranslation();

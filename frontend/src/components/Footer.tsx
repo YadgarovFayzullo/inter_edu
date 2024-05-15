@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { BsTelegram } from "react-icons/bs";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const { t } = useTranslation();
   return (
     <footer className="font-Montserrat">

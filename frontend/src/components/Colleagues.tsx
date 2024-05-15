@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const Colleagues: React.FC = () => {
+const Colleagues = () => {
   const { t } = useTranslation();
   return (
     <div className="flex justify-center mr-2 ml-3 font-Montserrat">
