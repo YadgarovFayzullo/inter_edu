@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import { Helmet } from "react-helmet";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function AdminNews() {
@@ -14,14 +13,6 @@ export default function AdminNews() {
   const [textError, setTextError] = useState("");
   const [imageError, setImageError] = useState("");
 
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      navigate("/login");
-    }
-  }, [navigate]);
 
   useEffect(() => {
     const currentDate = new Date().toISOString().split("T")[0];
