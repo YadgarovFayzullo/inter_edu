@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Home from "../pages/Home";
 import Redaction from "../pages/Redaction";
@@ -8,18 +13,23 @@ import Archive from "../pages/Archive";
 import AboutUs from "../pages/AboutUs";
 import Partnership from "../pages/Partnership";
 import Officials from "./Officials";
-import Login from "../pages/Login";
 import Admin from "../pages/Admin";
-import AdminNews from "../pages/AdminNews";
-import AdminBook from "../pages/AdminBook";
-import AdminPartners from "../pages/AdminPartners";
-import AdminArchive from "../pages/AdminArchive";
+// import Login from "../pages/Login";
+// import AdminNews from "../pages/AdminNews";
+// import AdminBook from "../pages/AdminBook";
+// import AdminPartners from "../pages/AdminPartners";
+// import AdminArchive from "../pages/AdminArchive";
+// import AdminDoc from "../pages/AdminDoc";
+import Doc from "../pages/Doc";
+import useAuth from "../hooks/useAuth";
+import Editions from "./Editions";
 
 function App() {
+  const { isAuthenticated } = useAuth();
   const [isAdmin, setIsAdmin] = useState(false);
 
-  const setAdminStatus = (status) => {
-    setIsAdmin(status);
+  const setIsAdminStatus = (status) => {
+    isAdmin(status);
   };
 
   return (
@@ -34,16 +44,38 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/archive" element={<Archive />} />
           <Route path="/officials" element={<Officials />} />
+          <Route path="/doc" element={<Doc />} />
+          <Route path="/edition" element={<Editions />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route
-            path="/login"
-            element={<Login setAdminStatus={setAdminStatus} />}
+            path="/admin"
+            element={isAuthenticated ? <Admin /> : <Navigate to="/login" />}
           />
-          <Route path="/admin" element={<Admin />} />
           {/* admin pages */}
-          <Route path="/adminNews" element={<AdminNews />} />
-          <Route path="/adminBook" element={<AdminBook />} />
-          <Route path="/adminPartners" element={<AdminPartners />} />
-          <Route path="/adminArchive" element={<AdminArchive />} />
+          {/* <Route
+            path="/adminNews"
+            element={isAuthenticated ? <AdminNews /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/adminBook"
+            element={isAuthenticated ? <AdminBook /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/adminPartners"
+            element={
+              isAuthenticated ? <AdminPartners /> : <Navigate to="/login" />
+            }
+          />
+          <Route
+            path="/adminArchive"
+            element={
+              isAuthenticated ? <AdminArchive /> : <Navigate to="/login" />
+            }
+          />
+          <Route
+            path="/adminDoc"
+            element={isAuthenticated ? <AdminDoc /> : <Navigate to="/login" />}
+          /> */}
         </Routes>
       </Router>
     </div>

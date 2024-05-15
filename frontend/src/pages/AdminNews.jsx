@@ -1,78 +1,130 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
+import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function AdminNews() {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
-  const [image, setImage] = useState(null);
+  const [imagePath, setImagePath] = useState(null);
   const [date, setDate] = useState("");
   const [newsList, setNewsList] = useState([]);
   const [titleError, setTitleError] = useState("");
   const [textError, setTextError] = useState("");
   const [imageError, setImageError] = useState("");
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+    }
+  }, [navigate]);
+
   useEffect(() => {
     const currentDate = new Date().toISOString().split("T")[0];
     setDate(currentDate);
+
+    const storedNews = JSON.parse(localStorage.getItem("newsList"));
+    if (storedNews) {
+      setNewsList(storedNews);
+    }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("newsList", JSON.stringify(newsList));
+  }, [newsList]);
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
-    setImage(file);
+    setImagePath(file);
   };
 
-  const addNews = () => {
+  //ADD NEWS
+  const addNews = async () => {
     let titleErrorText = "";
     let textErrorText = "";
     let imageErrorText = "";
 
     if (!title) {
-      titleErrorText = "Пожалуйста, заполните заголовок";
+      titleErrorText = "Введите загаловок";
     }
 
     if (!text) {
-      textErrorText = "Пожалуйста, заполните описание";
+      textErrorText = "Введите описание";
     }
 
-    if (!image) {
-      imageErrorText = "Пожалуйста, загрузите изображение";
+    if (!imagePath) {
+      imageErrorText = "Загрузите изоброжение";
     }
 
     setTitleError(titleErrorText);
     setTextError(textErrorText);
     setImageError(imageErrorText);
 
-    if (title && text && image) {
-      const currentDate = new Date().toISOString().split("T")[0];
-      const newsItem = {
-        id: Date.now(),
-        title: title,
-        text: text,
-        image: image,
-        date: currentDate,
-      };
+    const dateObj = new Date(date);
 
-      setNewsList([...newsList, newsItem]);
+    if (title && text && imagePath) {
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("text", text);
+      formData.append("date", dateObj.toISOString());
+      // formData.append("image", imagePath);
 
-      setTitle("");
-      setText("");
-      setImage(null);
-      setDate(currentDate);
+      try {
+        const token = localStorage.getItem("token");
 
+        const response = await axios.post(
+          "http://localhost:3000/news",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        console.log("News added successfully:");
+        setNewsList([...newsList, response.data]);
 
-      
-      setTitleError("");
-      setTextError("");
-      setImageError("");
+        setTitle("");
+        setText("");
+        setImagePath(null);
+        setDate(new Date().toISOString().split("T")[0]);
+
+        setTitleError("");
+        setTextError("");
+        setImageError("");
+      } catch (error) {
+        console.log("error adding news", error);
+      }
     }
   };
 
-  const deleteNews = (id) => {
-    setNewsList(newsList.filter((item) => item.id !== id));
+  //DELETE NEWS
+  const deleteNews = async (id) => {
+    try {
+      const token = localStorage.getItem("token");
+      await axios.delete(`http://localhost:3000/news?id=${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setNewsList((prevNewsList) =>
+        prevNewsList.filter((item) => item._id !== id)
+      );
+    } catch (error) {
+      console.error("Error deleting news:", error);
+    }
   };
 
   return (
     <div className="flex h-screen md:pl-64">
+      <Helmet>
+        <title>Новости</title>
+      </Helmet>
       <Sidebar />
       <div className="flex-1 p-0 flex flex-col items-start">
         <div className="bg-white p-6 rounded-lg w-full mb-4">
@@ -89,13 +141,14 @@ export default function AdminNews() {
               </label>
               <input
                 type="text"
+                name="title"
                 id="title"
                 className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
                 placeholder="Введите заголовок"
                 value={title}
                 onChange={(e) => {
                   setTitle(e.target.value);
-                  setTitleError(""); // Reset error when changing title
+                  setTitleError("");
                 }}
               />
               {titleError && <p className="text-red-500">{titleError}</p>}
@@ -109,13 +162,14 @@ export default function AdminNews() {
               </label>
               <textarea
                 id="text"
+                name="text"
                 className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
                 placeholder="Введите описание"
                 rows="4"
                 value={text}
                 onChange={(e) => {
                   setText(e.target.value);
-                  setTextError(""); // Reset error when changing text
+                  setTextError("");
                 }}
               ></textarea>
               {textError && <p className="text-red-500">{textError}</p>}
@@ -129,12 +183,13 @@ export default function AdminNews() {
               </label>
               <input
                 type="file"
+                name="file"
                 id="image"
                 className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
                 accept="image/*"
                 onChange={(e) => {
                   handleImageUpload(e);
-                  setImageError(""); // Reset error when changing image
+                  setImageError("");
                 }}
               />
               {imageError && <p className="text-red-500">{imageError}</p>}
@@ -148,16 +203,12 @@ export default function AdminNews() {
               </label>
               <input
                 type="date"
+                name="date"
                 id="date"
                 className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
                 value={date}
                 onChange={(e) => {
-                  const inputDate = e.target.value;
-                  const formattedDate = inputDate
-                    .split("-")
-                    .reverse()
-                    .join(".");
-                  setDate(formattedDate);
+                  setDate(e.target.value);
                 }}
               />
             </div>
@@ -174,26 +225,29 @@ export default function AdminNews() {
         <div className="max-w-lg w-full">
           {newsList.map((newsItem) => (
             <div
-              key={newsItem.id}
-              className="bg-white p-4 mb-4 rounded-lg shadow-md w-full flex items-center"
+              key={newsItem._id}
+              className="bg-white p-4 mb-4  w-full flex items-center"
             >
-              {newsItem.image && (
-                <img
-                  src={URL.createObjectURL(newsItem.image)}
-                  alt="News Image"
-                  className="w-[20%] h-auto rounded-md mr-4"
-                />
-              )}
               <div>
                 <h3 className="text-lg font-semibold mb-2">{newsItem.title}</h3>
                 <p className="text-gray-700 mb-2">{newsItem.text}</p>
-                <p className="text-gray-600 mb-2">
-                  Дата: {newsItem.date.split("-").reverse().join(".")}
-                </p>
+                {newsItem.date && (
+                  <p className="text-gray-600 mb-2">
+                    Дата:{" "}
+                    {new Date(newsItem.date).toLocaleDateString("ru-RU", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "2-digit",
+                    })}
+                  </p>
+                )}
                 <div className="mt-2">
                   <button
                     className="text-red-500 hover:text-red-700 font-semibold mr-2"
-                    onClick={() => deleteNews(newsItem.id)}
+                    onClick={() => {
+                      console.log("Deleting news item with ID:", newsItem._id);
+                      deleteNews(newsItem._id);
+                    }}
                   >
                     Удалить
                   </button>
