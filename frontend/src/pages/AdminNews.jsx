@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import { Helmet } from "react-helmet";
-// import axios from "axios";
 
 export default function AdminNews() {
   const [title, setTitle] = useState("");
@@ -14,113 +13,7 @@ export default function AdminNews() {
   const [imageError, setImageError] = useState("");
 
 
-  // useEffect(() => {
-  //   const currentDate = new Date().toISOString().split("T")[0];
-  //   setDate(currentDate);
-
-  //   const fetchNews = async () => {
-  //     try {
-  //       const response = await axios.get("http://localhost:3000/news", {
-  //         headers: {
-  //           Authorization: `Bearer ${localStorage.getItem("token")}`,
-  //         },
-  //       });
-  //       setNewsList(response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching news:", error);
-  //     }
-  //   };
-
-  //   fetchNews();
-  // }, []);
-
-  // const handleImageUpload = (e) => {
-  //   const file = e.target.files[0];
-  //   setImagePath(file);
-  // };
-
-  // // ADD NEWS
-  // const addNews = async () => {
-  //   let titleErrorText = "";
-  //   let textErrorText = "";
-  //   let imageErrorText = "";
-
-  //   if (!title) {
-  //     titleErrorText = "Введите загаловок";
-  //   }
-
-  //   if (!text) {
-  //     textErrorText = "Введите описание";
-  //   }
-
-  //   if (!imagePath) {
-  //     imageErrorText = "Загрузите изображение";
-  //   }
-
-  //   setTitleError(titleErrorText);
-  //   setTextError(textErrorText);
-  //   setImageError(imageErrorText);
-
-  //   const dateObj = new Date(date);
-
-  //   if (title && text && imagePath) {
-  //     const formData = new FormData();
-  //     formData.append("title", title);
-  //     formData.append("text", text);
-  //     formData.append("date", dateObj.toISOString());
-  //     formData.append("image", imagePath);
-
-  //     console.log("FormData:", formData);
-
-  //     try {
-  //       const token = localStorage.getItem("token");
-
-  //       const response = await axios.post(
-  //         "http://localhost:3000/files/uploads",
-  //         formData,
-  //         {
-  //           headers: {
-  //             "Content-Type": "multipart/form-data",
-  //             Authorization: `Bearer ${token}`,
-  //           },
-  //         }
-  //       );
-
-  //       console.log("News added successfully:", response.data);
-  //       setNewsList([...newsList, response.data]);
-
-  //       setTitle("");
-  //       setText("");
-  //       setImagePath(null);
-  //       setDate(new Date().toISOString().split("T")[0]);
-
-  //       setTitleError("");
-  //       setTextError("");
-  //       setImageError("");
-  //     } catch (error) {
-  //       console.log("Error adding news", error);
-  //     }
-  //   }
-  // };
-
-
-  // // DELETE NEWS
-  // const deleteNews = async (id) => {
-  //   try {
-  //     const token = localStorage.getItem("token");
-  //     await axios.delete(`http://localhost:3000/news?id=${id}`, {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     });
-  //     setNewsList((prevNewsList) =>
-  //       prevNewsList.filter((item) => item._id !== id)
-  //     );
-  //   } catch (error) {
-  //     console.error("Error deleting news:", error);
-  //   }
-  // };
-
+  
   return (
     <div className="flex h-screen md:pl-64">
       <Helmet>

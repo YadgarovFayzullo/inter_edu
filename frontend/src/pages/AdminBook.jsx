@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import { Helmet } from "react-helmet";
 
@@ -8,56 +7,7 @@ export default function AdminBook() {
   const [error, setError] = useState("");
   const [imageList, setImageList] = useState([]);
 
-  // const handleImageUpload = (e) => {
-  //   const file = e.target.files[0];
-  //   setImage(file);
-  //   setError("");
-  // };
-
-  // const addBook = async () => {
-  //   if (!image) {
-  //     setError("Пожалуйста, загрузите фото.");
-  //     return;
-  //   }
-
-  //   if (image) {
-  //     try {
-  //       const token = localStorage.getItem("token");
-
-  //       const formData = new FormData();
-  //       formData.append("image", image);
-
-  //       const response = await axios.post(
-  //         "http://localhost:3000/files",
-  //         formData,
-  //         {
-  //           headers: {
-  //             "Content-Type": "multipart/form-data",
-  //             Authorization: `Bearer ${token}`,
-  //           },
-  //         }
-  //       );
-
-  //       console.log("Image added successfully:", response.data);
-
-  //       const bookItem = {
-  //         id: response.data.id,
-  //         image: image,
-  //       };
-
-  //       setImageList([...imageList, bookItem]);
-  //       setImage(null);
-  //       setError("");
-  //     } catch (error) {
-  //       console.error("Error adding book:", error);
-  //     }
-  //   }
-  // };
-
-  // const deleteBook = (id) => {
-  //   setImageList(imageList.filter((item) => item.id !== id));
-  // };
-
+  
   return (
     <div className="flex h-screen md:pl-64">
       <Helmet>

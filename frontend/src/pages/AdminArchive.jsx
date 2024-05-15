@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { Helmet } from "react-helmet";
-// import axios from "axios";
 
 export default function AdminArchive() {
   const [filePath, setFilePath] = useState(null);
@@ -12,90 +11,7 @@ export default function AdminArchive() {
   const [title, setTitle] = useState("");
   const [titleError, setTitleError] = useState("");
 
-  // const handleFileChange = (event) => {
-  //   setFilePath(event.target.files[0]);
-  //   setFileError("");
-  // };
-
-  // const handleYearChange = (event) => {
-  //   setReleaseYear(event.target.value);
-  //   setYearError("");
-  // };
-
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-
-  //   let yearErrorText = "";
-  //   let fileErrorText = "";
-  //   let titleErrorText = "";
-
-  //   if (!releaseYear) {
-  //     yearErrorText = "Пожалуйста, выберите год";
-  //   }
-
-  //   if (!filePath) {
-  //     fileErrorText = "Пожалуйста, выберите файл";
-  //   }
-
-  //   if (!title) {
-  //     titleErrorText = "Пожалуйста, заполните поле";
-  //   }
-
-  //   setYearError(yearErrorText);
-  //   setFileError(fileErrorText);
-  //   setTitleError(titleErrorText);
-
-  //   if (releaseYear && filePath) {
-  //     const formData = new FormData();
-  //     formData.append("releaseYear", releaseYear);
-  //     formData.append("file", filePath);
-
-  //     try {
-  //       const token = localStorage.getItem("token");
-  //       const response = await axios.post(
-  //         "http://localhost:3000/archive",
-  //         formData,
-  //         {
-  //           headers: {
-  //             "Content-Type": "multipart/form-data",
-  //             Authorization: `Bearer ${token}`,
-  //           },
-  //         }
-  //       );
-  //       console.log("Archive added successfully:", response.data);
-
-  //       const archiveItem = {
-  //         year: releaseYear,
-  //         name: title,
-  //       };
-
-  //       setNewsList([...newsList, archiveItem]);
-  //       setReleaseYear("");
-  //       setFilePath(null);
-  //       setYearError("");
-  //       setFileError("");
-  //     } catch (error) {
-  //       console.error("Error adding archive:", error);
-  //     }
-  //   }
-  // };
-
-  // const deleteBook = async (id) => {
-  //   try {
-  //     const token = localStorage.getItem("token");
-  //     await axios.delete(`http://localhost:3000/?id=$archive{id}`, {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     });
-
-  //     setNewsList((prevNewsList) =>
-  //       prevNewsList.filter((item) => item.id !== id)
-  //     );
-  //   } catch (error) {
-  //     console.error("Error deleting book:", error);
-  //   }
-  // };
+  
 
   return (
     <div className="flex h-screen md:pl-64">
