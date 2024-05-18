@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import News from "../components/News";
 import Officials from "../components/Officials";
+import Stats from "../components/Stats"
 import {Helmet} from "react-helmet"
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Header />
         <Book />
         <News />
+        <Stats />
         <Officials />
       </Layout>
     </div>
