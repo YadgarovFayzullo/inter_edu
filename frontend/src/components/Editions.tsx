@@ -3,7 +3,8 @@ import { useTranslation } from "react-i18next";
 import Layout from "./Layout";
 
 const Editions = () => {
-  const pdfFiles = ["IE&GS-2024-3(1).pdf", "IE&GS-2024-3(2).pdf"];
+  const pdfFiles = ["IE&GS-2024-3(1).pdf", "IE&GS-2024-3(2).pdf",];
+  const pdfFiles3 = ["IE&GS-2024-4(1).pdf", "IE&GS-2024-4(2).pdf"];
 
   const { t } = useTranslation();
   return (
@@ -11,10 +12,28 @@ const Editions = () => {
       <div className="grid grid-row-col auto-cols-max items-center justify-center md:justify-normal md:items-baseline md:ml-7 gap-5 mt-10 mb-96 md:flex">
         <div>
           <h1 className="bg-[#f0582f] rounded-md py-1 px-28 text-white">
-            Выпуск
+            3-выпуск
           </h1>
           <ul className="ml-20 mt-4">
             {pdfFiles.map((pdfFile, index) => (
+              <li key={index}>
+                <a
+                  href={pdfFile}
+                  target="_blank"
+                  className="hover:text-[#f0582f] transition-color text-xl"
+                >
+                  {index + 1}-{t("issue")}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h1 className="bg-[#f0582f] rounded-md py-1 px-28 text-white">
+            4-выпуск
+          </h1>
+          <ul className="ml-20 mt-4">
+            {pdfFiles3.map((pdfFile, index) => (
               <li key={index}>
                 <a
                   href={pdfFile}

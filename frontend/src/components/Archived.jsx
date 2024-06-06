@@ -1,3 +1,86 @@
+// import React, { useEffect, useState } from "react";
+// import { useTranslation } from "react-i18next";
+// import axios from "axios";
+
+// export default function Archived() {
+//   const { t } = useTranslation();
+//   const [pdfFiles, setPdfFiles] = useState({});
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+
+//   useEffect(() => {
+//     const fetchFiles = async () => {
+//       try {
+//         const response = await axios.get("http://localhost:3000/archive");
+//         console.log("Response data:", response.data);
+
+//         const filesByYear = response.data.reduce((acc, file) => {
+//           const { releaseYear, name } = file;
+//           if (!releaseYear) {
+//             console.error("Missing releaseYear for file:", file);
+//             return acc;
+//           }
+//           if (!acc[releaseYear]) {
+//             acc[releaseYear] = [];
+//           }
+//           acc[releaseYear].push(name);
+//           return acc;
+//         }, {});
+
+//         console.log("Files by year:", filesByYear);
+//         setPdfFiles(filesByYear);
+//       } catch (error) {
+//         setError(error);
+//         console.error("Error fetching files:", error);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchFiles();
+//   }, []);
+
+//   if (loading) {
+//     return <div>{t("loading")}</div>;
+//   }
+
+//   if (error) {
+//     return <div>{t("error_loading_files")}</div>;
+//   }
+
+//   return (
+//     <div>
+//       <div className="flex justify-center">
+//         <h1 className="mt-24 text-2xl font-Montserrat lg:text-3xl">
+//           {t("archived")}
+//         </h1>
+//       </div>
+//       <div className="grid grid-row-col auto-cols-max items-center justify-center md:justify-normal md:items-baseline md:ml-7 gap-5 mt-10 mb-96 md:flex">
+//         {Object.keys(pdfFiles).map((releaseYear) => (
+//           <div key={releaseYear}>
+//             <h1 className="bg-[#f0582f] rounded-md py-1 px-28 text-white">
+//               {releaseYear}
+//             </h1>
+//             <ul className="ml-20 mt-4">
+//               {pdfFiles[releaseYear].map((fileName, index) => (
+//                 <li key={index}>
+//                   <a
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="hover:text-[#f0582f] transition-colors duration-300 text-xl"
+//                     href={`/path/to/files/${fileName}`}
+//                   >
+//                     {index + 1}-{t("num")}
+//                   </a>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -12,7 +95,12 @@ export default function Archived() {
     "/IE&GS4.pdf",
     "/IE&GS5.pdf",
   ];
-  const pdfFiles_2024 = ["IE&GS1-2024.pdf", "IE&GS2-2024.pdf","/edition"];
+  const pdfFiles_2024 = [
+    "IE&GS1-2024.pdf",
+    "IE&GS2-2024.pdf",
+    "/edition",
+    "/edition",
+  ];
 
   return (
     <div>
